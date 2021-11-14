@@ -10,9 +10,9 @@ body {
     overflow: hidden;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
     margin-top: 8px;
     margin-bottom: 10px;
+    margin-left: -15px;
 }
 
 .navbar a {
@@ -20,9 +20,9 @@ body {
     text-decoration: none;
     font-weight: bold;
     color: black;
-    margin-left: 75px;
+    margin-left: 116px;
     padding-top: 15px;
-    width: 160px;
+    width: 139px;
     text-align: center;
 }
 
@@ -571,13 +571,23 @@ footer {
         margin-left: 214px;
     }
     #sortList {
-        margin-left: 165px;
+        margin-left: 100px;
         width: 120px;
         height: 34px;
         font-size: 22px;
     }
     #socialList a {
         font-size: 20px;
+    }
+    .delete {
+        font-size: 23px;
+        right: 19px;
+    }
+    .updateBtn {
+        padding: 3px;
+        font-size: 22px;
+        right: 34px;
+        height: 28px;
     }
     .shoe .nextBtn {
         right: 15px;
@@ -678,16 +688,20 @@ footer {
 
 @media screen and (max-width: 768px) {
     .navbar a {
-        margin-left: 0;
-        width: 140px;
-        font-size: 16px;
+        margin-left: -2px;
+        width: 100px;
+        font-size: 10px;
+    }
+    .delete {
+        font-size: 13px;
+        right: 13px;
     }
     .dropdown {
         margin-right: 15px;
         margin-left: 0;
     }
     .dropdown .dropbtn {
-        font-size: 16px;
+        font-size: 10px;
     }
     #saleBanner {
         height: 200px;
@@ -729,11 +743,18 @@ footer {
         padding: 22px;
     }
     #sortList {
-        margin-left: 94px;
+        margin-left: 65px;
         width: 135px;
         height: 27px;
         font-size: 17px;
         border: black 2px solid;
+    }
+    .updateBtn {
+        font-size: 16px;
+        width: 75px;
+        padding: 2px;
+        height: 19px;
+        top: 328px;
     }
     .shoe {
         height: 380px;
@@ -876,15 +897,28 @@ footer {
         margin-left: -50px;
     }
     .dropdown .dropbtn {
-        font-size: 11px;
+        font-size: 6px;
     }
     .navbar {
         margin-top: 0;
         margin-bottom: -10px;
     }
     .navbar a {
-        margin-left: -80px;
-        font-size: 11px;
+        margin-left: -10px;
+        font-size: 6px;
+        width: 75px;
+    }
+    .delete {
+        right: 9px;
+        font-size: 7px;
+    }
+    .updateBtn {
+        top: 131px;
+        font-size: 9px;
+        right: 31px;
+        width: 48px;
+        height: 12px;
+        padding: 0;
     }
     #saleBanner {
         height: 90px;
@@ -935,7 +969,7 @@ footer {
         padding-right: 41px;
     }
     #sortList {
-        margin-left: 65px;
+        margin-left: 23px;
         width: 50px;
         height: 12px;
         font-size: 4px;

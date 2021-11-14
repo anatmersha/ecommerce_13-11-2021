@@ -10,9 +10,9 @@ body {
     overflow: hidden;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
     margin-top: 8px;
     margin-bottom: 10px;
+    margin-left: -15px;
 }
 
 .navbar a {
@@ -20,9 +20,9 @@ body {
     text-decoration: none;
     font-weight: bold;
     color: black;
-    margin-left: 75px;
+    margin-left: 116px;
     padding-top: 15px;
-    width: 160px;
+    width: 139px;
     text-align: center;
 }
 
@@ -532,16 +532,16 @@ footer {
 
 @media screen and (max-width: 1025px) {
     .navbar a {
-        margin-left: 30px;
-        width: 140px;
-        font-size: 17px;
+        margin-left: -2px;
+        width: 133px;
+        font-size: 15px;
     }
     .dropdown {
         margin-right: 60px;
-        margin-left: 40px;
+        margin-left: 13px;
     }
     .dropdown .dropbtn {
-        font-size: 17px;
+        font-size: 15px;
     }
     #saleBanner p {
         margin-left: 220px;
@@ -572,7 +572,7 @@ footer {
         margin-left: 214px;
     }
     #sortList {
-        margin-left: 165px;
+        margin-left: 106px;
         width: 120px;
         height: 34px;
         font-size: 22px;
@@ -655,6 +655,16 @@ footer {
     .top img {
         height: 70%;
     }
+    .top .delete {
+        font-size: 19px;
+        right: 19px;
+    }
+    .updateBtn {
+        height: 18px;
+        right: 32px;
+        padding: 3px;
+        font-size: 19px;
+    }
     #footerPara {
         margin-bottom: 38px;
     }
@@ -681,15 +691,15 @@ footer {
 @media screen and (max-width: 768px) {
     .navbar a {
         margin-left: 0;
-        width: 140px;
-        font-size: 16px;
+        width: 98px;
+        font-size: 12px;
     }
     .dropdown {
         margin-right: 15px;
         margin-left: 0;
     }
     .dropdown .dropbtn {
-        font-size: 16px;
+        font-size: 12px;
     }
     #saleBanner {
         height: 200px;
@@ -731,7 +741,7 @@ footer {
         padding: 22px;
     }
     #sortList {
-        margin-left: 135px;
+        margin-left: 72px;
         width: 95px;
         height: 27px;
         font-size: 17px;
@@ -742,7 +752,18 @@ footer {
         margin-bottom: 0px;
     }
     .top img {
-        height: 60%;
+        height: 45%;
+    }
+    .updateBtn {
+        font-size: 14px;
+        width: 82px;
+        right: 25px;
+        height: 18px;
+        padding: 0;
+    }
+    .top .delete {
+        font-size: 15px;
+        right: 13px;
     }
     .top .nextBtn {
         right: 10px;
@@ -871,14 +892,15 @@ footer {
 @media screen and (max-width: 425px) {
     .dropdown {
         margin-right: -90px;
-        margin-left: -50px;
+        margin-left: -40px;
     }
     .dropdown .dropbtn {
-        font-size: 11px;
+        font-size: 7px;
     }
     .navbar a {
-        margin-left: -80px;
-        font-size: 11px;
+        margin-left: -85px;
+        font-size: 7px;
+        width: 146px;
     }
     #saleBanner {
         height: 90px;
@@ -929,22 +951,33 @@ footer {
         padding-right: 41px;
     }
     #sortList {
-        margin-left: 45px;
+        margin-left: 27px;
         width: 65px;
         height: 12px;
-        font-size: 4px;
+        font-size: 7px;
         border: black 1px solid;
     }
+    .updateBtn {
+        top: 140px;
+        font-size: 8px;
+        height: 11px;
+        width: 50px;
+        right: 30px;
+    }
     .top {
-        height: 500px;
+        height: 305px;
         width: 27%;
     }
     .top img {
-        height: 30%;
+        height: 32%;
+    }
+    .top .delete {
+        font-size: 8px;
+        right: 10px;
     }
     .top h3,
     .top h5 {
-        font-size: 8px;
+        font-size: 6px;
     }
     .top p {
         margin-left: -70px;
@@ -968,9 +1001,9 @@ footer {
         margin-bottom: -130px;
     }
     .quickViewBtn {
-        right: 8px;
+        right: 9px;
         width: 94px;
-        bottom: 179px;
+        bottom: 192px;
         height: 13px;
         font-size: 6px;
     }

@@ -1,17 +1,17 @@
 const express = require("express");
-const mongo = require('mongodb');
+// const mongo = require('mongodb');
 const path = require("path");
 const utilies = require("./utilies");
-const products = require("./products");
+// const products = require("./products");
 
-const URL = "mongodb://localhost:27017";
+// const URL = "mongodb://localhost:27017";
 const PORT = 2000;
 const publicPath = path.join(__dirname, "..", "public");
 
 const app = express();
-const ObjectId = mongo.ObjectId;
-const dbName = "ecommerce";
-const MongoClient = mongo.MongoClient;
+// const ObjectId = mongo.ObjectId;
+// const dbName = "ecommerce";
+// const MongoClient = mongo.MongoClient;
 app.use(express.json());
 app.use(express.static(publicPath));
 
@@ -47,34 +47,14 @@ app.post('/products', (req, res) => {
     utilies.addProduct(req, res);
 })
 
-
-
-
-//*********/ PRODUCTS
 // GET PRODUCTS BY CATEGORY
-app.get("/tops", (req, res) => {
-    utilies.getTopsCategorey(req, res);
+
+app.get("/categories/:category", (req, res) => {
+    utilies.getProductsByCategorey(req, res);
 })
 
-app.get("/shoes", (req, res) => {
-    utilies.getShoesCategorey(req, res);
-})
-
-app.get("/dresses", (req, res) => {
-    utilies.getDressesCategorey(req, res);
-})
-
-app.get("/buttom", (req, res) => {
-    utilies.getButtomsCategorey(req, res);
-})
-
-
-
-
-//*********/ PRODUCTS
-// 
 // DELETE FROM CART
-app.patch("/product/:id", (req, res) => {
+app.delete("/product/:id", (req, res) => {
     utilies.deleteProduct(req, res);
 })
 
@@ -88,11 +68,6 @@ app.patch("/product/:id", (req, res) => {
     utilies.updateProduct(req, res);
 })
 
-
-
-
-//*******/ /CONTACT/ 
-// 
 // GET ALL MESSAGES
 app.get("/contact", (req, res) => {
     utilies.getAllMessages(req, res);
@@ -103,12 +78,6 @@ app.post("/contact", (req, res) => {
     utilies.addNewMessage(req, res);
 })
 
-
-
-
-
-// *******/ CART
-// 
 // GET MY CART
 app.get("/cartDATA/:id", (req, res) => {
     utilies.getCartByID(req, res);

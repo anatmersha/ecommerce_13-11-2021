@@ -15,55 +15,16 @@ app.use(express.json());
 
 
 //           /CATEGORY/
-// push all category to their page!
-function getTopsCategorey(req, res) {
+// get product by category 
+function getProductsByCategorey(req, res) {
     MongoClient.connect(URL, function(err, db) {
         if (err) { console.log(err); }
         const dbo = db.db(dbName);
-        dbo.collection("products").find({ 'Category': /top$/ })
+        const categoryName = { Category: req.params.category };
+        dbo.collection("products").find(categoryName)
             .toArray((err, tops) => {
                 if (err) { console.log(err); }
                 res.status(201), res.send(tops)
-                db.close();
-            })
-    })
-}
-
-function getShoesCategorey(req, res) {
-    MongoClient.connect(URL, function(err, db) {
-        if (err) { console.log(err); }
-        const dbo = db.db(dbName);
-        dbo.collection("products").find({ 'Category': /shoes$/ })
-            .toArray(function(err, shoes) {
-                if (err) { console.log(err); }
-                console.log(shoes);
-                res.status(201), res.send(shoes)
-                db.close();
-            })
-    })
-}
-
-function getDressesCategorey(req, res) {
-    MongoClient.connect(URL, function(err, db) {
-        if (err) { console.log(err); }
-        const dbo = db.db(dbName);
-        dbo.collection("products").find({ 'Category': /dresses$/ })
-            .toArray(function(err, dresses) {
-                if (err) { console.log(err); }
-                res.status(201), res.send(dresses)
-                db.close();
-            })
-    })
-}
-
-function getButtomsCategorey(req, res) {
-    MongoClient.connect(URL, function(err, db) {
-        if (err) { console.log(err); }
-        const dbo = db.db(dbName);
-        dbo.collection("products").find({ 'Category': /buttom$/ })
-            .toArray(function(err, buttoms) {
-                if (err) { console.log(err); }
-                res.status(201), res.send(buttoms)
                 db.close();
             })
     })
@@ -95,7 +56,7 @@ function addProduct(req, res) {
         dbo.collection("products").insertOne(newProduct, (err, result) => {
             if (err) { console.log(err); }
             console.log(result);
-            res.status(201).res.send(result)
+            res.status(201), res.send(result)
             db.close()
         })
 
@@ -162,7 +123,7 @@ function addNewCart(req, res) {
 
         dbo.collection("carts").insertOne(newCart, (err, result) => {
             if (err) { console.log(err); }
-            res.sendStatus(201), res.send(result);
+            res.status(201), res.send(result);
             db.close()
         })
 
@@ -219,8 +180,6 @@ function deleteCartProducts(req, res) {
     })
 }
 
-
-
 //       /CONTACT/
 // GET
 function getAllMessages(req, res) {
@@ -258,4 +217,4 @@ function addNewMessage(req, res) {
 }
 
 
-module.exports = { getAllMessages, addNewMessage, deleteCartProducts, pushProductToCart, getCartByID, addNewCart, getTopsCategorey, getShoesCategorey, getDressesCategorey, getButtomsCategorey, addProduct, getAllProducts, updateProduct, deleteProduct };
+module.exports = { getProductsByCategorey, getAllMessages, addNewMessage, deleteCartProducts, pushProductToCart, getCartByID, addNewCart, addProduct, getAllProducts, updateProduct, deleteProduct };

@@ -33,6 +33,7 @@ function deleteProduct(x) {
     console.log(id);
     axios.patch("/deleteProduct/618c11a42f2d818001ec25ff", { _id: id })
         .then((response) => {
+            document.getElementById(`${id}`).innerHTML = '';
             console.log(response);
         })
         .catch((error) => {

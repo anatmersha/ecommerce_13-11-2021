@@ -19,7 +19,7 @@ const formHeader = document.getElementById('formHeader');
 const exitForm = document.getElementsByClassName('exitForm');
 
 axios
-    .get("/dresses")
+    .get(`/categories/dresses`)
     .then((data) => {
 
         dresses = data.data;
@@ -58,6 +58,7 @@ function addToCart(i) {
     }
     axios.patch(`/cartPush/618c11a42f2d818001ec25ff`, newProduct)
         .then((response) => {
+            alert("Product sent to cart!")
             console.log(response);
         })
         .catch((error) => {
@@ -70,6 +71,7 @@ function deleteProduct(i) {
     const id = dresses[i]._id;
     axios.patch(`/product/${id}`)
         .then((response) => {
+            document.getElementById(`${id}`).innerHTML = '';
             console.log(response);
         })
         .catch((error) => {
@@ -101,6 +103,7 @@ function updateProduct(e, i) {
             Images: Images,
         })
         .then((response) => {
+            alert("Product has been updated!")
             console.log(response);
         })
         .catch((error) => {
@@ -112,7 +115,7 @@ const itemsDisplay = (dresses) => {
     let show = "";
     for (let i = 0; i < dresses.length; i++) {
         show += `
-    <article class="dress">
+    <article class="dress" id="${dresses[i]._id}">
     <h3>${dresses[i].Name}</h3>
     <span onclick="deleteProduct(${i})" class="delete">&times;</span>
     <button class="preBtn" type="button"><a>&#10094;</a></button>
