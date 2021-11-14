@@ -1,0 +1,709 @@
+                        * {
+                            margin-top: 0;
+                        }
+                        
+                        body {
+                            font-family: Garamond;
+                            background-color: aliceblue;
+                        }
+                        
+                        .navbar {
+                            overflow: hidden;
+                            display: flex;
+                            flex-wrap: wrap;
+                            justify-content: center;
+                            margin-top: 8px;
+                            margin-bottom: 10px;
+                        }
+                        
+                        .navbar a {
+                            font-size: 18px;
+                            text-decoration: none;
+                            font-weight: bold;
+                            color: black;
+                            margin-left: 75px;
+                            padding-top: 15px;
+                            width: 160px;
+                            text-align: center;
+                        }
+                        
+                        .dropdown {
+                            float: left;
+                            overflow: hidden;
+                            margin-left: 75px;
+                            height: 50px;
+                            width: 160px;
+                        }
+                        
+                        .dropdown .dropbtn {
+                            font-size: 18px;
+                            border: none;
+                            font-family: inherit;
+                            margin: 14px;
+                            FONT-WEIGHT: bold;
+                            background-color: aliceblue;
+                        }
+                        
+                        .navbar a:hover,
+                        .dropdown:hover,
+                        .dropbtn:hover {
+                            background-color: red;
+                        }
+                        
+                        .dropdown-content {
+                            display: none;
+                            position: absolute;
+                            background-color: #f9f9f9;
+                            min-width: 155px;
+                            z-index: 1;
+                        }
+                        
+                        .dropdown-content a {
+                            float: none;
+                            color: black;
+                            padding: 12px 16px;
+                            text-decoration: none;
+                            display: block;
+                            text-align: left;
+                            width: 122px;
+                            margin-left: 0;
+                        }
+                        
+                        .dropdown-content a:hover {
+                            background-color: rgb(10, 10, 10);
+                            color: white;
+                        }
+                        
+                        .dropdown:hover .dropdown-content {
+                            display: block;
+                        }
+                        
+                        #saleBanner {
+                            background: url(../IMAGES/G-IMAGES/3454.jpg);
+                            background-size: cover;
+                            width: 90%;
+                            height: 305px;
+                            border: 10px black solid;
+                            text-align: center;
+                            margin-left: 90px;
+                        }
+                        
+                        #saleBanner h1 {
+                            color: rgb(223, 3, 3);
+                            font-size: 145px;
+                            text-align: center;
+                            letter-spacing: 25px;
+                            font-weight: bold;
+                            margin-top: 30px;
+                            padding-top: 20px;
+                            text-shadow: 8px -5px 0px rgb(233 61 61);
+                        }
+                        
+                        #saleBanner p {
+                            font-size: 21px;
+                            font-weight: bold;
+                            color: white;
+                            background: red;
+                            width: 500px;
+                            height: 23px;
+                            margin-left: 585px;
+                            margin-top: -30px;
+                        }
+                        
+                        #saleBanner h3 {
+                            font-size: 42px;
+                            margin-top: -115px;
+                            color: red;
+                            font-weight: bold;
+                            background-color: white;
+                            width: 460px;
+                            margin-left: 600px;
+                            height: 42px;
+                        }
+                        
+                        #emptyCartSection {
+                            display: none;
+                            justify-content: center;
+                            align-items: center;
+                            margin-left: 100px;
+                            flex-direction: column;
+                            margin-bottom: 335px;
+                        }
+                        
+                        #cartIcon {
+                            font-size: 35px;
+                            margin-top: 37px;
+                            margin-bottom: 15px;
+                        }
+                        
+                        #emptyCartHeader {
+                            font-size: 45px;
+                        }
+                        
+                        #emptyCartLink {
+                            font-size: 20px;
+                        }
+                        
+                        #cart {
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            flex-direction: column;
+                        }
+                        
+                        .cartImg {
+                            width: 242px;
+                            height: 222px;
+                        }
+                        
+                        .cartImg:hover {
+                            width: 292px;
+                            height: 272px;
+                        }
+                        
+                        .cartPrice {
+                            font-size: 20px;
+                            font-weight: bold;
+                            padding-left: 55px;
+                        }
+                        
+                        .cartName {
+                            font-size: 19px;
+                            margin-bottom: 0;
+                            letter-spacing: 5px;
+                            text-align: center;
+                            width: 482px;
+                        }
+                        
+                        .cartDesc {
+                            letter-spacing: 2px;
+                            font-size: 16px;
+                            text-align: center;
+                        }
+                        
+                        .quantity {
+                            width: 44px;
+                            height: 20px;
+                            margin-bottom: 15px;
+                            font-size: 15px;
+                            margin-left: 55px;
+                        }
+                        
+                        .total {
+                            font-size: 20px;
+                            font-weight: bold;
+                            margin-left: 55px;
+                        }
+                        
+                        .remove {
+                            font-size: 36px;
+                            font-weight: bold;
+                            height: 0;
+                            width: 21px;
+                        }
+                        
+                        .cartTable {
+                            background-color: rgb(219, 236, 250);
+                            margin: 10px;
+                        }
+                        
+                        #cartTotal {
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            background-color: rgb(200, 228, 253);
+                            width: 759px;
+                            margin-left: 564px;
+                            height: 11px;
+                            font-size: 25px;
+                            font-weight: bold;
+                            letter-spacing: 5px;
+                            padding-top: 24px;
+                            margin-top: 10px;
+                        }
+                        
+                        #checkoutTable {
+                            background-color: rgb(195, 222, 248);
+                            display: flex;
+                            justify-content: end;
+                            align-items: center;
+                            width: 19%;
+                            margin-left: 962px;
+                            margin-top: 10px;
+                            margin-bottom: 20px;
+                            text-align: start;
+                        }
+                        
+                        #checkoutTable th {
+                            font-size: 25px;
+                            padding-bottom: 15px;
+                        }
+                        
+                        #checkoutTable td {
+                            font-size: 23px;
+                            font-weight: 900;
+                            padding-bottom: 15px;
+                            padding-right: 20px;
+                        }
+                        
+                        #discount,
+                        #discountAmount {
+                            color: red;
+                        }
+                        
+                        #couponInput {
+                            height: 25px;
+                            width: 150px;
+                            font-size: 17px;
+                        }
+                        
+                        #couponButton {
+                            background-color: black;
+                            color: white;
+                            font-family: garamond;
+                            height: 28px;
+                            margin-left: 10px;
+                            font-size: 21px;
+                            font-weight: bold;
+                        }
+                        
+                        footer {
+                            background-color: beige;
+                            padding-top: 1px;
+                        }
+                        
+                        #footerHead,
+                        #footerPara,
+                        #updates {
+                            text-align: center;
+                        }
+                        
+                        #footerHead {
+                            letter-spacing: 2px;
+                            font-size: 30px;
+                            padding-top: 10px;
+                        }
+                        
+                        #footerPara {
+                            margin-top: -17px;
+                            margin-bottom: 50px;
+                            font-size: 25px;
+                        }
+                        
+                        #inputEmail {
+                            background-color: beige;
+                            border-right: none;
+                            border-left: none;
+                            border-top: none;
+                            border-bottom: 1px solid black;
+                            width: 470px;
+                            font-size: 28px;
+                            font-family: Garamond;
+                        }
+                        
+                        #subscribe {
+                            border: solid 0.2px blanchedalmond;
+                            font-size: 8px;
+                            background-color: beige;
+                            color: black;
+                            font-size: 20px;
+                            font-family: Garamond;
+                            padding: 4px;
+                        }
+                        
+                        #subscribe:hover,
+                        #inputEmail:hover {
+                            background-color: blanchedalmond;
+                        }
+                        
+                        #infoList {
+                            list-style-type: none;
+                            margin-left: -40px;
+                            text-align: center;
+                            padding: 40px;
+                        }
+                        
+                        #infoList li {
+                            margin: 10px;
+                        }
+                        
+                        #infoList a {
+                            text-decoration: none;
+                            color: black;
+                            font-size: 16px;
+                            width: 230px;
+                        }
+                        
+                        #bottomFooter {
+                            background-color: rgb(255, 235, 205);
+                            height: 65px;
+                        }
+                        
+                        #socialList {
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            flex-direction: row;
+                            list-style-type: none;
+                            margin-left: -40px;
+                        }
+                        
+                        #socialList li {
+                            margin-top: 10px;
+                        }
+                        
+                        #socialList a {
+                            text-decoration: none;
+                            padding: 5px;
+                            font-size: 20px;
+                            color: black;
+                        }
+                        
+                        #paraFooter {
+                            font-size: 16px;
+                            font-family: Garamond;
+                            text-align: center;
+                        }
+                        
+                        @media screen and (max-width: 1025px) {
+                            .navbar a {
+                                margin-left: 30px;
+                                width: 140px;
+                                font-size: 17px;
+                            }
+                            .dropdown {
+                                margin-right: 60px;
+                                margin-left: 40px;
+                            }
+                            .dropdown .dropbtn {
+                                font-size: 17px;
+                            }
+                            #saleBanner p {
+                                margin-left: 220px;
+                                margin-top: -40px;
+                                font-size: 19px;
+                                width: 460px;
+                            }
+                            #saleBanner h3 {
+                                margin-left: 263px;
+                                margin-top: -120px;
+                                font-size: 30px;
+                                width: 370px;
+                            }
+                            #saleBanner {
+                                margin-left: 43px;
+                                height: 285px;
+                            }
+                            #cartTotal {
+                                width: 762px;
+                                margin-left: 123px;
+                            }
+                            #checkoutTable {
+                                margin-left: 532px;
+                                width: 35%;
+                            }
+                            .cartImg {
+                                width: 170px;
+                                height: 185px;
+                            }
+                            .cartImg:hover {
+                                width: 220px;
+                                height: 235px;
+                            }
+                            #footerHead {
+                                font-size: 28px;
+                                font-size: 23px;
+                            }
+                            #inputEmail {
+                                width: 440px;
+                                font-size: 26px;
+                            }
+                            #subscribe {
+                                font-size: 19px;
+                            }
+                            #infoList a {
+                                font-size: 14px;
+                            }
+                            #paraFooter {
+                                font-size: 13px;
+                                padding-top: 18px;
+                            }
+                            #bottomFooter {
+                                height: 90px;
+                            }
+                        }
+                        
+                        @media screen and (max-width: 768px) {
+                            .navbar a {
+                                margin-left: 0;
+                                width: 140px;
+                                font-size: 16px;
+                            }
+                            .dropdown {
+                                margin-right: 15px;
+                                margin-left: 0;
+                            }
+                            .dropdown .dropbtn {
+                                font-size: 16px;
+                            }
+                            #saleBanner {
+                                height: 200px;
+                                margin-left: 28px;
+                            }
+                            #saleBanner h1 {
+                                font-size: 85px;
+                            }
+                            #saleBanner h3 {
+                                margin-left: 208px;
+                                margin-top: -64px;
+                                font-size: 24px;
+                                width: 245px;
+                                height: 26px;
+                            }
+                            #saleBanner p {
+                                margin-left: 142px;
+                                margin-top: -20px;
+                                font-size: 14px;
+                                width: 390px;
+                                height: 18px;
+                            }
+                            .cartImg {
+                                width: 110px;
+                                height: 140px;
+                            }
+                            .cartImg:hover {
+                                width: 160px;
+                                height: 190px;
+                            }
+                            .remove {
+                                font-size: 25px;
+                            }
+                            .cartDesc {
+                                letter-spacing: 1px;
+                                font-size: 12px;
+                            }
+                            .cartName {
+                                font-size: 14px;
+                                letter-spacing: 3px;
+                                width: 343px;
+                            }
+                            .cartPrice {
+                                font-size: 16px;
+                            }
+                            .quantity {
+                                width: 23px;
+                                height: 18px;
+                                font-size: 13px;
+                            }
+                            .cartTable {
+                                width: 65%;
+                            }
+                            #cartTotal {
+                                width: 490px;
+                                margin-left: 130px;
+                                height: 2px;
+                                font-size: 18px;
+                                padding-top: 20px;
+                            }
+                            #checkoutTable th {
+                                font-size: 20px;
+                                padding-bottom: 9px;
+                            }
+                            #checkoutTable td {
+                                font-size: 19px;
+                                padding-bottom: 12px;
+                            }
+                            #couponInput {
+                                height: 11px;
+                                width: 114px;
+                                font-size: 9px;
+                            }
+                            #couponButton {
+                                font-size: 10px;
+                                width: 36px;
+                                height: 15px;
+                                padding: 0;
+                            }
+                            #checkoutTable {
+                                margin-left: 357px;
+                            }
+                            #footerHead {
+                                font-size: 21px;
+                            }
+                            #paraFooter {
+                                font-size: 11px;
+                                padding-top: 6px;
+                            }
+                            #inputEmail {
+                                width: 320px;
+                                font-size: 22px;
+                            }
+                            #subscribe {
+                                font-size: 16px;
+                            }
+                            #infoList a {
+                                font-size: 12px;
+                            }
+                            #info {
+                                height: 120px;
+                            }
+                            #infoList {
+                                padding: 0;
+                            }
+                            #bottomFooter {
+                                height: 60px;
+                            }
+                            #socialList {
+                                margin-bottom: 3px;
+                            }
+                            #infoList {
+                                padding: 17px;
+                            }
+                        }
+                        
+                        @media screen and (max-width: 425px) {
+                            .dropdown {
+                                margin-right: -90px;
+                                margin-left: -50px;
+                            }
+                            .dropdown .dropbtn {
+                                font-size: 11px;
+                            }
+                            .navbar {
+                                margin-top: 0;
+                                margin-bottom: -10px;
+                            }
+                            .navbar a {
+                                margin-left: -80px;
+                                font-size: 11px;
+                            }
+                            #saleBanner {
+                                height: 90px;
+                                margin-left: 10px;
+                            }
+                            #saleBanner h1 {
+                                font-size: 30px;
+                            }
+                            #saleBanner h1 {
+                                margin-top: -15px;
+                                text-shadow: 5px -3px 0px rgb(233 61 61);
+                            }
+                            #saleBanner h3 {
+                                margin-left: 112px;
+                                margin-top: -4px;
+                                font-size: 13px;
+                                width: 125px;
+                                height: 15px;
+                            }
+                            #saleBanner p {
+                                margin-left: 80px;
+                                margin-top: -8px;
+                                font-size: 8px;
+                                width: 193px;
+                                height: 10px;
+                            }
+                            .cartImg {
+                                width: 57px;
+                                height: 72px;
+                            }
+                            .cartImg:hover {
+                                width: 107px;
+                                height: 122px;
+                            }
+                            .cartPrice {
+                                font-size: 8px;
+                                padding-left: 32px;
+                            }
+                            .cartName {
+                                font-size: 6px;
+                                width: 195px;
+                            }
+                            .cartDesc {
+                                font-size: 5px;
+                            }
+                            .quantity {
+                                width: 10px;
+                                height: 4px;
+                                font-size: 5px;
+                                margin-left: 32px;
+                            }
+                            .total {
+                                font-size: 6px;
+                                font-weight: bold;
+                                margin-left: 32px;
+                            }
+                            .cartTable {
+                                margin: 5px;
+                            }
+                            #checkoutTable th {
+                                font-size: 9px;
+                                padding-bottom: 0px;
+                            }
+                            #checkoutTable td {
+                                font-size: 8px;
+                                padding-bottom: 0;
+                            }
+                            #couponButton {
+                                font-size: 5px;
+                                width: 20px;
+                                height: 9px;
+                                padding: 0;
+                            }
+                            #couponInput {
+                                height: 4px;
+                                width: 40px;
+                                font-size: 5px;
+                            }
+                            #checkoutTable {
+                                margin-left: 203px;
+                            }
+                            #socialList {
+                                margin-bottom: 5px;
+                                height: 22px;
+                            }
+                            .remove {
+                                font-size: 10px;
+                            }
+                            #cartTotal {
+                                width: 284px;
+                                margin-left: 63px;
+                                height: 7px;
+                                font-size: 8px;
+                                padding-top: 10px;
+                                margin-top: 4px;
+                            }
+                            #footerHead {
+                                font-size: 11px;
+                            }
+                            #footerPara {
+                                font-size: 9px;
+                                margin-top: -12px;
+                                margin-bottom: 16px;
+                            }
+                            #inputEmail {
+                                width: 90px;
+                                font-size: 8px;
+                            }
+                            #subscribe {
+                                font-size: 7px;
+                            }
+                            #info {
+                                height: 50px;
+                            }
+                            #infoList a {
+                                font-size: 5px;
+                            }
+                            #infoList li {
+                                margin: -8px;
+                            }
+                            #socialList a {
+                                font-size: 9px
+                            }
+                            #paraFooter {
+                                font-size: 5px;
+                                padding-top: 0;
+                            }
+                            #bottomFooter {
+                                height: 37px;
+                            }
+                        }

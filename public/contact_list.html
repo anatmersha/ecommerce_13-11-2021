@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/contact_list.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <section class="navbar">
+                <a href="../index.html">HOME</a>
+                <a href="../contact.html">CONTACTS</a>
+                <a href="./cart.html">CART</a>
+                <div class="dropdown">
+                    <button class="dropbtn">PRODUCTS 
+                    </button>
+
+                    <div class="dropdown-content">
+                        <a href="./top.html">Tops</a>
+                        <a href="./buttom.html">Buttoms</a>
+                        <a href="./dresses.html">Dresses</a>
+                        <a href="./shoes.html">Shoes</a>
+                    </div>
+                </div>
+            </section>
+        </nav>
+    </header>
+    <main>
+        <section id="tableSection">
+            <table id="userCard">
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Message</th>
+                </tr>
+            </table>
+        </section>
+    </main>
+    <footer>
+        <p id="paraFooter">© 2023 by Anat Mersha. All rights reserved to A.M.</p>
+    </footer>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script>
+    const rightPage = document.getElementById("rightPage");
+    const userCard = document.getElementById("userCard");
+    const showEmail = document.getElementsByClassName("showEmail");
+    const showMessage = document.getElementsByClassName("showMessage");
+    axios.get("/contact")
+        .then(function(response) {
+            console.log(response.data);
+            const messages = response.data;
+            for (let i = 0; i < messages.length; i++) {
+                userCard.innerHTML += `
+                <tr>
+                <td class="showName">${messages[i].Name}</td>
+                <td class="showEmail">${messages[i].Email}</td>
+                <td class="showMessage">${messages[i].Message}</td>
+                </tr>
+                    `;
+            }
+        })
+        .catch(function(error) {
+            console.log(error);
+        })
+</script>
+
+</html>

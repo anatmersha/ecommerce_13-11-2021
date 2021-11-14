@@ -1,0 +1,312 @@
+* {
+    margin-top: 0;
+}
+
+body {
+    background: linear-gradient(90deg, rgb(194, 117, 117) 50%, white 50% 50%);
+    font-family: Garamond;
+}
+
+.navbar {
+    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+}
+
+.navbar a {
+    font-size: 18px;
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+    padding-top: 15px;
+    width: 160px;
+    text-align: center;
+}
+
+.dropdown {
+    float: left;
+    overflow: hidden;
+    height: 50px;
+    width: 160px;
+}
+
+.dropdown .dropbtn {
+    font-size: 18px;
+    border: none;
+    font-family: inherit;
+    margin: 14px;
+    FONT-WEIGHT: bold;
+    background-color: transparent;
+}
+
+.navbar a:hover,
+.dropdown:hover,
+.dropbtn:hover {
+    background-color: red;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 155px;
+    z-index: 1;
+}
+
+.dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    width: 122px;
+    margin-left: 0;
+}
+
+.dropdown-content a:hover {
+    background-color: rgb(10, 10, 10);
+    color: white;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+main {
+    display: flex;
+}
+
+#leftSection,
+#formOutcomeSection {
+    width: 50%;
+    margin-top: 50px;
+}
+
+#createProductHeader,
+#getAllProducts {
+    font-size: 45px;
+    margin-left: 188px;
+    margin-top: 47px;
+    margin-bottom: 10px;
+}
+
+#nameInput,
+#priceInput,
+#descriptionInput,
+#isSaleInput,
+#categoryInput,
+#nameInput,
+#image1Input,
+#image2Input {
+    margin-left: 195px;
+    height: 50px;
+    font-size: 23px;
+    font-family: inherit;
+    margin-bottom: 10px;
+    width: 380px;
+}
+
+#isSaleInput,
+#categoryInput {
+    width: 389px;
+}
+
+#submitBtn,
+#getProducts {
+    height: 40px;
+    border: none;
+    font-size: 23px;
+    font-family: inherit;
+    width: 387px;
+    margin-left: 195px;
+}
+
+#forms {
+    position: fixed;
+    top: 100px;
+}
+
+#showAllProducts {
+    margin-top: 112px;
+    font-size: 23px;
+    font-family: inherit;
+}
+
+hr {
+    width: 520px;
+    margin-left: 0;
+}
+
+#newItemId {
+    margin-top: -45px;
+}
+
+.productImg1,
+.productImg2 {
+    width: 450px;
+}
+
+#paraFooter {
+    position: fixed;
+    top: 910px;
+    left: 245px;
+}
+
+@media screen and (max-width: 1025px) {
+    .navbar a {
+        margin-left: -15px;
+        width: 127px;
+        font-size: 15px;
+    }
+    .dropdown {
+        margin-right: 60px;
+        margin-left: -38px;
+    }
+    .dropdown .dropbtn {
+        font-size: 15px;
+        margin-left: 40px;
+    }
+    #createProductHeader,
+    #getAllProducts {
+        font-size: 40px;
+        margin-left: 58px;
+        margin-top: 5px;
+        margin-bottom: 25px;
+    }
+    #nameInput,
+    #priceInput,
+    #descriptionInput,
+    #isSaleInput,
+    #categoryInput,
+    #nameInput,
+    #image1Input,
+    #image2Input {
+        margin-left: 70px;
+        height: 46px;
+        font-size: 21px;
+        width: 345px;
+    }
+    #isSaleInput,
+    #categoryInput {
+        width: 353px;
+    }
+    #submitBtn,
+    #getProducts {
+        width: 351px;
+        margin-left: 71px;
+    }
+    #newItemId {
+        margin-top: -60px;
+    }
+    .productImg1,
+    .productImg2 {
+        width: 240px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .navbar a {
+        margin-left: -18px;
+        width: 115px;
+        font-size: 13px;
+    }
+    .dropdown .dropbtn {
+        font-size: 13px;
+        margin-left: 28px;
+    }
+    #createProductHeader,
+    #getAllProducts {
+        font-size: 36px;
+        margin-left: 20px;
+    }
+    #nameInput,
+    #priceInput,
+    #descriptionInput,
+    #isSaleInput,
+    #categoryInput,
+    #nameInput,
+    #image1Input,
+    #image2Input {
+        margin-left: 40px;
+        height: 35px;
+        font-size: 18px;
+        width: 289px;
+    }
+    #isSaleInput,
+    #categoryInput {
+        width: 297px;
+    }
+    #submitBtn,
+    #getProducts {
+        width: 296px;
+        margin-left: 41px;
+        font-size: 18px;
+    }
+    #newItemId {
+        margin-top: -104px;
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .navbar a {
+        margin-left: -14px;
+        width: 65px;
+        font-size: 9px;
+    }
+    .dropdown .dropbtn {
+        font-size: 9px;
+    }
+    #createProductHeader,
+    #getAllProducts {
+        font-size: 20px;
+        margin-left: 4px;
+    }
+    #nameInput,
+    #priceInput,
+    #descriptionInput,
+    #isSaleInput,
+    #categoryInput,
+    #nameInput,
+    #image1Input,
+    #image2Input {
+        margin-left: 10px;
+        height: 21px;
+        font-size: 14px;
+        width: 168px;
+    }
+    #isSaleInput,
+    #categoryInput {
+        width: 177px;
+    }
+    #submitBtn,
+    #getProducts {
+        width: 174px;
+        margin-left: 11px;
+        font-size: 14px;
+        height: 21px;
+    }
+    #forms {
+        top: 60px;
+    }
+    #newItemId {
+        font-size: 10px;
+    }
+    .productImg1,
+    .productImg2 {
+        width: 170px;
+    }
+    .productName {
+        font-size: 20px;
+        margin-top: -66px;
+    }
+    .productDescription {
+        font-size: 13px;
+    }
+    .productPrice {
+        font-size: 16px;
+        font-weight: bold;
+    }
+}

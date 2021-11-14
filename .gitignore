@@ -1,0 +1,3 @@
+# docs to not upload- to be ignored!
+*node_modules
+.env

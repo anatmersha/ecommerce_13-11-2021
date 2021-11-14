@@ -1,0 +1,204 @@
+        * {
+            margin-top: 0;
+        }
+        
+        body {
+            /* background: linear-gradient(90deg, rgb(194, 117, 117) 30%, white 30% 70%); */
+            font-family: Garamond;
+        }
+        
+        .navbar {
+            overflow: hidden;
+            display: flex;
+            flex-wrap: wrap;
+            margin-bottom: 10px;
+        }
+        
+        .navbar a {
+            font-size: 18px;
+            text-decoration: none;
+            font-weight: bold;
+            color: black;
+            padding-top: 15px;
+            width: 145px;
+            text-align: center;
+        }
+        
+        .dropdown {
+            float: left;
+            overflow: hidden;
+            height: 50px;
+            width: 160px;
+        }
+        
+        .dropdown .dropbtn {
+            font-size: 18px;
+            border: none;
+            font-family: inherit;
+            margin: 14px;
+            FONT-WEIGHT: bold;
+            background-color: transparent;
+        }
+        
+        .navbar a:hover,
+        .dropdown:hover,
+        .dropbtn:hover {
+            background-color: red;
+        }
+        
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 155px;
+            z-index: 1;
+        }
+        
+        .dropdown-content a {
+            float: none;
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+            width: 122px;
+            margin-left: 0;
+        }
+        
+        .dropdown-content a:hover {
+            background-color: rgb(10, 10, 10);
+            color: white;
+        }
+        
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        
+        main {
+            display: flex;
+        }
+        
+        #tableSection {
+            overflow-x: auto;
+            margin-left: 250px;
+            margin-top: 13px;
+        }
+        
+        #userCard {
+            border-collapse: collapse;
+        }
+        
+        #userCard th {
+            padding-bottom: 12px;
+            text-align: left;
+            background-color: rgb(194, 117, 117);
+            color: white;
+            font-size: 27px;
+        }
+        
+        #userCard td,
+        #userCard th {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+        
+        .showName {
+            width: 200px;
+        }
+        
+        .showEmail {
+            width: 270px;
+        }
+        
+        .showMessage {
+            width: 900px;
+            font-size: 20px;
+            font-family: inherit;
+        }
+        
+        #paraFooter {
+            font-weight: bold;
+            font-size: 13px;
+            margin-left: 700px;
+            margin-top: 20px;
+        }
+        
+        @media screen and (max-width: 1025px) {
+            .showName {
+                width: 150px;
+            }
+            #userCard th {
+                font-size: 22px;
+            }
+            #paraFooter {
+                margin-left: 368px;
+            }
+            #tableSection {
+                margin-left: 0;
+                margin-top: 13px;
+            }
+        }
+        
+        @media screen and (max-width: 768px) {
+            .navbar a {
+                font-size: 14px;
+                width: 94px;
+                margin-left: 60px;
+            }
+            .dropdown .dropbtn {
+                font-size: 15px;
+            }
+            #userCard th {
+                font-size: 20px;
+            }
+            .dropdown .dropbtn {
+                font-size: 12px;
+            }
+            .dropdown {
+                width: 94px;
+                margin-left: 60px;
+            }
+            #userCard td,
+            #userCard th {
+                font-size: 14px;
+            }
+            #userCard th {
+                font-size: 20px;
+            }
+            #paraFooter {
+                margin-left: 245px;
+                font-size: 11px;
+            }
+            #tableSection {
+                margin-top: -4px;
+            }
+            #paraFooter {
+                margin-left: 235px;
+            }
+        }
+        
+        @media screen and (max-width: 425px) {
+            .navbar a {
+                font-size: 10px;
+                width: 42px;
+                margin-left: 44px;
+            }
+            .dropdown .dropbtn {
+                font-size: 10px;
+            }
+            .dropdown {
+                width: 94px;
+                margin-left: 10px;
+            }
+            #userCard td,
+            #userCard th {
+                font-size: 10px;
+            }
+            #userCard th {
+                font-size: 15px;
+            }
+            #paraFooter {
+                font-size: 7px;
+                margin-left: 123px;
+            }
+        }

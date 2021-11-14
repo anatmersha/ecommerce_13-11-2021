@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/addProduct.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <section class="navbar">
+                <a href="../index.html">HOME</a>
+                <a href="../contact.html">CONTACTS</a>
+                <a href="./cart.html">CART</a>
+                <div class="dropdown">
+                    <button class="dropbtn">PRODUCTS 
+                    <i class="fa fa-caret-down"></i>
+                  </button>
+
+                    <div class="dropdown-content">
+                        <a href="./top.html">Tops</a>
+                        <a href="./buttom.html">Buttoms</a>
+                        <a href="./dresses.html">Dresses</a>
+                        <a href="./shoes.html">Shoes</a>
+                    </div>
+                </div>
+            </section>
+        </nav>
+    </header>
+    <main>
+        <section id="leftSection">
+            <article id="forms">
+                <h1 id="createProductHeader">Create a new product</h1>
+                <form id="idAddProduct">
+                    <input id="nameInput" type="text" autofocus required placeholder="Enter a name"><br>
+                    <input id="priceInput" type="number" required placeholder="Enter a price"><br>
+                    <input id="descriptionInput" type="text" required placeholder="Enter a description"><br>
+
+                    <select id="isSaleInput" required placeholder="Enter if product in sale">
+                    <option value="true">true</option>
+                    <option value="false">false</option>
+                    </select><br>
+
+                    <select id="categoryInput" required placeholder="Enter product category">
+                    <option value="top">top</option>
+                    <option value="buttom">buttom</option>
+                    <option value="shoes">shoes</option>
+                    <option value="dresses">dresses</option>
+                    </select><br>
+
+                    <input id="image1Input" type="text" required placeholder="Enter first img"><br>
+                    <input id="image2Input" type="text" required placeholder="Enter second img"><br>
+
+                    <button id="submitBtn" type="submit">SUBMIT</button><br>
+
+                    <h1 id="getAllProducts">Click for all products</h1>
+                    <button id="getProducts">GET</button>
+            </article>
+
+        </section>
+        </section>
+
+        <section id="formOutcomeSection">
+            <section id="showAllProducts"></section>
+        </section>
+
+
+    </main>
+    <footer>
+        <p id="paraFooter">© 2023 by Anat Mersha. All rights reserved to A.M.</p>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script>
+        document.getElementById('idAddProduct').addEventListener("submit", addProduct);
+        document.getElementById('getProducts').addEventListener("click", getAllProducts);
+
+
+        function addProduct(event) {
+            event.preventDefault();
+            const showAllProducts = document.getElementById('showAllProducts');
+
+            const Name = document.getElementById('nameInput').value;
+            const Price = document.getElementById('priceInput').value;
+            const Description = document.getElementById('descriptionInput').value;
+            const isSale = document.getElementById('isSaleInput').value;
+            const Category = document.getElementById('categoryInput').value;
+            const image1 = document.getElementById('image1Input').value;
+            const image2 = document.getElementById('image2Input').value;
+            const Images = [image1, image2];
+
+            axios.post("/products", {
+                    Name: Name,
+                    Price: Price,
+                    Description: Description,
+                    isSale: isSale,
+                    Category: Category,
+                    Images: Images
+                })
+                .then(function(response) {
+                    const newProductId = response.data.insertedId;
+                    console.log(newProductId);
+                    showAllProducts.innerHTML += `<p id="newItemId">Your new product id: "${newProductId}"<hr width="60px"></p>`;
+                    alert("Mission accomplished");
+                })
+                .catch(function(error) {
+                    console.log(error);
+                })
+        }
+
+        function getAllProducts(event) {
+            event.preventDefault();
+
+            axios.get("/products")
+                .then(function(response) {
+                    const allProducts = response.data;
+                    console.log(allProducts);
+                    for (let i = 0; i < allProducts.length; i++) {
+                        console.log(allProducts.length);
+                        showAllProducts.innerHTML += `
+                        
+                        <article class="products">
+                        <h3 id="productName">${allProducts[i].Name}</h3>
+                        <h5 id="productDescription">${allProducts[i].Description}</h5>
+                        <p class="productPrice">${allProducts[i].Price} $</p>
+                        <img class="productImg1" src="${allProducts[i].Images[0]}">
+                        <img class="productImg2" src="${allProducts[i].Images[1]}">
+                        </article>;`
+                    }
+                })
+                .catch(function(error) {
+                    console.log(error);
+                })
+        }
+    </script>
+</body>
+
+</html>

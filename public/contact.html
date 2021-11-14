@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="CSS/contact.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <section class="navbar">
+                <a href="../index.html">HOME</a>
+                <a href="../contact.html">CONTACTS</a>
+                <a href="./cart.html">CART</a>
+                <div class="dropdown">
+                    <button class="dropbtn">PRODUCTS 
+                    </button>
+
+                    <div class="dropdown-content">
+                        <a href="./top.html">Tops</a>
+                        <a href="./buttom.html">Buttoms</a>
+                        <a href="./dresses.html">Dresses</a>
+                        <a href="./shoes.html">Shoes</a>
+                    </div>
+                </div>
+            </section>
+        </nav>
+    </header>
+    <main>
+        <section id="leftSection">
+            <img src="./IMAGES/G-IMAGES/new2.jpg">
+        </section>
+
+        <section id="rightSection">
+            <h1 id="mainHeader">CONTACT FORM</h1>
+
+            <form id="idSendMsg">
+                <input id="nameInput" type="text" autofocus placeholder="Enter your name"><br>
+                <input id="emailInput" type="email" placeholder="Enter a valid email address"><br>
+                <textarea id="msgInput" rows="10" cols="30" placeholder="Enter your message"></textarea>
+                <button id="submitBtn" type="submit">SUBMIT</button>
+            </form>
+            <a href="./contact_list.html"><button id="getAllMsg" type="button">GET ALL MESSAGES</button></a>
+
+
+            <h1 id="infoHeader">FOLLOW US</h1>
+            <ul id="socialList">
+                <li><a href="https://twitter.com/?lang=he"><i class="fa fa-twitter"></i></a></li>
+                <li><a href="https://www.instagram.com/"><i class="fa fa-instagram"></i></a></li>
+                <li><a href="https://he-il.facebook.com/"><i class="fa fa-facebook"></i></a></li>
+            </ul>
+            <article>
+                <ul id="infoList">
+                    <li><a href="https://goo.gl/maps/UUcjZu9sXGEoJ9Zx8">500 Sesame St, West Carson, CA 90502, USA</a></li>
+                    <li><a href="mailto:info@squadgoal.com">info@squadgoal.com</a></li>
+                    <li><a href="https://wa.me/9724733378901">Tel: 4733378901</a></li>
+                </ul>
+
+                <p id="paraFooter">© 2023 by Anat Mersha. All rights reserved to A.M.</p>
+            </article>
+        </section>
+
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script>
+        document.getElementById('idSendMsg').addEventListener("submit", sendMsg);
+
+        function sendMsg(event) {
+            event.preventDefault();
+            const nameInput = document.getElementById("nameInput").value;
+            const emailInput = document.getElementById("emailInput").value;
+            const msgInput = document.getElementById("msgInput").value;
+            axios.post("/contact", {
+                    Name: nameInput,
+                    Email: emailInput,
+                    Message: msgInput,
+                })
+                .then((response) => {
+                    console.log(response);
+                    alert("Mission accomplished");
+                })
+                .catch((error) => {
+                    console.log(error);
+                })
+        }
+    </script>
+</body>
+
+</html>

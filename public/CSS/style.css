@@ -1,0 +1,568 @@
+                * {
+                    margin-top: 0;
+                    font-family: Garamond;
+                }
+                
+                #navBar {
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: center;
+                    list-style-type: none;
+                    letter-spacing: 5px;
+                }
+                
+                #navBar li {
+                    padding: 10px;
+                    margin: 12px;
+                }
+                
+                #navBar a {
+                    margin: 50px;
+                    color: black;
+                    font-weight: bold;
+                    text-decoration: none;
+                }
+                
+                #navBar a:hover {
+                    color: white;
+                }
+                
+                #navBar li:hover {
+                    background-color: black;
+                }
+                
+                #hero {
+                    display: flex;
+                    flex-wrap: wrap;
+                    flex-direction: row;
+                    align-items: center;
+                    justify-content: center;
+                }
+                
+                #hero1,
+                #hero3 {
+                    width: 42%;
+                    height: 800px;
+                }
+                
+                #hero2 {
+                    position: absolute;
+                    height: 770px;
+                    width: 800px;
+                }
+                
+                #heroPara {
+                    position: absolute;
+                    font-size: 100px;
+                    color: white;
+                    font-weight: bolder;
+                }
+                
+                #intro {
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: center;
+                    align-items: center;
+                    margin: 20px;
+                    background-color: rgb(255, 235, 205);
+                    height: 450px;
+                    text-align: center;
+                    font-size: 20px;
+                    letter-spacing: 3px;
+                }
+                
+                #introHead {
+                    font-size: 30px;
+                    font-weight: bold;
+                }
+                
+                #coupon {
+                    color: transparent;
+                    background-color: transparent;
+                    border: transparent;
+                    font-size: 22px;
+                    font-weight: bold;
+                }
+                
+                #coupon:hover {
+                    color: white;
+                    background-color: black;
+                    width: 145px;
+                    height: 60px;
+                }
+                
+                #innerCoupon {
+                    font-size: 17px;
+                    font-weight: bold;
+                }
+                
+                #fCategories,
+                #sCategories {
+                    display: flex;
+                    flex-wrap: wrap;
+                    position: relative;
+                    background-color: rgb(243, 217, 217);
+                    padding: 50px;
+                }
+                
+                #fCategories a,
+                #sCategories a {
+                    position: absolute;
+                    text-decoration: none;
+                    color: black;
+                    font-size: 110px;
+                    font-weight: bold;
+                }
+                
+                #CTops a {
+                    margin-top: 280px;
+                    margin-left: -425px;
+                    color: white;
+                    font-size: 120px;
+                }
+                
+                #CButtoms a {
+                    margin-top: 280px;
+                    margin-left: -242px;
+                }
+                
+                #CDresses a {
+                    margin-top: 280px;
+                    margin-left: -260px;
+                    color: white;
+                    font-size: 95px;
+                }
+                
+                #CShoes a {
+                    margin-left: -395px;
+                }
+                
+                #CTops,
+                #CButtoms,
+                #CDresses,
+                #CShoes {
+                    width: 47%;
+                    text-align: center;
+                }
+                
+                #CButtomsImg,
+                #CShoesImg {
+                    width: 500px;
+                    height: 650px;
+                }
+                
+                #CTopsImg,
+                #CDressesImg {
+                    width: 650px;
+                    height: 600px;
+                }
+                
+                #CTopsImg,
+                #CShoesImg {
+                    margin-left: -300px;
+                }
+                
+                #CButtomsImg,
+                #CDressesImg {
+                    margin-right: -210px;
+                }
+                
+                #followUs {
+                    background-color: beige;
+                }
+                
+                #followHead {
+                    text-align: center;
+                    font-size: 40px;
+                    margin-bottom: 10px;
+                    padding-top: 40px;
+                }
+                
+                #followimgGallary {
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: center;
+                    justify-content: space-between;
+                    justify-content: space-around;
+                    align-items: center;
+                }
+                
+                #followimgGallary .img {
+                    width: 17%;
+                    height: 370px;
+                    border: 12px solid black;
+                    transition: width 1.5s, height 1.5s;
+                }
+                
+                #followimgGallary .img:hover {
+                    width: 20%;
+                    height: 470px;
+                }
+                
+                footer {
+                    background-color: beige;
+                    padding-top: 1px;
+                }
+                
+                #footerHead,
+                #footerPara,
+                #updates {
+                    text-align: center;
+                }
+                
+                #footerHead {
+                    letter-spacing: 2px;
+                    font-size: 30px;
+                }
+                
+                #footerPara {
+                    margin-top: -17px;
+                    margin-bottom: 50px;
+                    font-size: 25px;
+                }
+                
+                #inputEmail {
+                    background-color: beige;
+                    border-right: none;
+                    border-left: none;
+                    border-top: none;
+                    border-bottom: 1px solid black;
+                    width: 470px;
+                    font-size: 28px;
+                    font-family: Garamond;
+                }
+                
+                #subscribe {
+                    border: solid 0.2px blanchedalmond;
+                    font-size: 8px;
+                    background-color: beige;
+                    color: black;
+                    font-size: 20px;
+                    font-family: Garamond;
+                    padding: 4px;
+                }
+                
+                #subscribe:hover,
+                #inputEmail:hover {
+                    background-color: blanchedalmond;
+                }
+                
+                #infoList {
+                    list-style-type: none;
+                    margin-left: -40px;
+                    text-align: center;
+                    padding: 40px;
+                }
+                
+                #infoList li {
+                    margin: 10px;
+                }
+                
+                #infoList a {
+                    text-decoration: none;
+                    color: black;
+                    font-size: 16px;
+                    width: 230px;
+                }
+                
+                #bottomFooter {
+                    background-color: rgb(255, 235, 205);
+                    height: 88px;
+                }
+                
+                #socialList {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-direction: row;
+                    list-style-type: none;
+                    margin-left: -40px;
+                }
+                
+                #socialList li {
+                    margin-top: 10px;
+                }
+                
+                #socialList a {
+                    text-decoration: none;
+                    padding: 18px;
+                    font-size: 32px;
+                    color: black;
+                }
+                
+                #paraFooter {
+                    font-size: 16px;
+                    font-family: Garamond;
+                    text-align: center;
+                    padding-top: 20px;
+                }
+                
+                @media screen and (max-width: 1025px) {
+                    #hero2 {
+                        height: 615px;
+                        width: 630px;
+                    }
+                    #hero1,
+                    #hero3 {
+                        width: 42%;
+                        height: 650px;
+                    }
+                    #heroPara {
+                        font-size: 80px;
+                    }
+                    #intro {
+                        height: 310px;
+                    }
+                    #introHead {
+                        font-size: 27px;
+                    }
+                    #introPara {
+                        font-size: 17px;
+                    }
+                    #fCategories,
+                    #sCategories {
+                        padding: 25px;
+                    }
+                    #CButtomsImg,
+                    #CDressesImg {
+                        margin-right: 0;
+                    }
+                    #CTopsImg,
+                    #CShoesImg {
+                        margin-left: 0;
+                    }
+                    #CTopsImg,
+                    #CDressesImg {
+                        width: 440px;
+                        height: 490px;
+                    }
+                    #CButtomsImg,
+                    #CShoesImg {
+                        width: 370px;
+                        height: 560px;
+                    }
+                    #CTops a {
+                        margin-top: 230px;
+                        margin-left: -300px;
+                    }
+                    #fCategories a,
+                    #sCategories a {
+                        font-size: 88px;
+                    }
+                    #CButtoms a {
+                        margin-left: -351px;
+                    }
+                    #CShoes a {
+                        margin-left: -301px;
+                    }
+                    #CDresses a {
+                        margin-top: 214px;
+                        margin-left: -386px;
+                    }
+                    #followHead {
+                        font-size: 33px;
+                    }
+                    #socialList a {
+                        font-size: 22px;
+                    }
+                    #followimgGallary .img {
+                        height: 340px;
+                    }
+                    #footerHead {
+                        font-size: 28px;
+                        margin-top: 25px;
+                    }
+                    #footerPara {
+                        font-size: 20px;
+                    }
+                    #inputEmail {
+                        width: 390px;
+                        font-size: 25px;
+                    }
+                }
+                
+                @media screen and (max-width: 768px) {
+                    #navBar a {
+                        margin: 22px;
+                        font-size: 12px;
+                    }
+                    #navBar li {
+                        padding: 0px;
+                        padding-top: 18px;
+                        margin: 0px;
+                    }
+                    #hero2 {
+                        height: 530px;
+                        width: 490px;
+                    }
+                    #hero1,
+                    #hero3 {
+                        width: 42%;
+                        height: 545px;
+                    }
+                    #heroPara {
+                        font-size: 65px;
+                    }
+                    #intro {
+                        height: 250px;
+                    }
+                    #fCategories,
+                    #sCategories {
+                        padding: 10px;
+                    }
+                    #CTopsImg,
+                    #CDressesImg {
+                        width: 335px;
+                        height: 420px;
+                    }
+                    #CButtomsImg,
+                    #CShoesImg {
+                        width: 310px;
+                        height: 452px;
+                    }
+                    #CTopsImg,
+                    #CShoesImg {
+                        margin-right: -60px;
+                    }
+                    #fCategories a,
+                    #sCategories a {
+                        font-size: 65px;
+                    }
+                    #CTops a {
+                        margin-left: -155px;
+                    }
+                    #CButtoms a {
+                        margin-left: -278px;
+                        margin-top: 225px;
+                    }
+                    #CShoes a {
+                        margin-left: -178px;
+                    }
+                    #CDresses a {
+                        margin-top: 182px;
+                        margin-left: -292px;
+                    }
+                    #followHead {
+                        font-size: 24px;
+                    }
+                    #socialList a {
+                        font-size: 17px;
+                    }
+                    #followimgGallary .img {
+                        width: 17%;
+                        height: 280px;
+                        border: 9px solid black
+                    }
+                    #footerHead {
+                        font-size: 20px;
+                    }
+                    #footerPara {
+                        font-size: 17px;
+                    }
+                    #inputEmail {
+                        width: 322px;
+                        font-size: 22px;
+                    }
+                    #subscribe {
+                        font-size: 18px;
+                    }
+                    #infoList a {
+                        font-size: 14px;
+                    }
+                    #bottomFooter {
+                        height: 68px;
+                    }
+                    #paraFooter {
+                        font-size: 14px;
+                    }
+                }
+                
+                @media screen and (max-width: 425px) {
+                    #navBar a {
+                        margin: 17px;
+                        font-size: 11px;
+                    }
+                    #navBar {
+                        letter-spacing: 0;
+                    }
+                    #hero2 {
+                        height: 350px;
+                        width: 60%;
+                    }
+                    #hero1,
+                    #hero3 {
+                        height: 358px;
+                    }
+                    #heroPara {
+                        font-size: 38px;
+                    }
+                    #introHead {
+                        font-size: 18px;
+                    }
+                    #intro {
+                        height: 160px;
+                    }
+                    #introPara {
+                        font-size: 10px;
+                    }
+                    #CTopsImg,
+                    #CDressesImg {
+                        width: 178px;
+                        height: 240px;
+                    }
+                    #CButtomsImg,
+                    #CShoesImg {
+                        width: 178px;
+                        height: 260px;
+                    }
+                    #fCategories a,
+                    #sCategories a {
+                        font-size: 40px;
+                    }
+                    #CTops a {
+                        margin-left: -70px;
+                        margin-top: 130px;
+                    }
+                    #CButtoms a {
+                        margin-left: -162px;
+                        margin-top: 128px;
+                    }
+                    #CShoes a {
+                        margin-left: -80px;
+                    }
+                    #CDresses a {
+                        margin-top: 107px;
+                        margin-left: -166px;
+                    }
+                    #followHead {
+                        font-size: 17px;
+                        padding-top: 19px;
+                    }
+                    #socialList a {
+                        font-size: 12px;
+                        padding: 10px;
+                    }
+                    #followimgGallary .img {
+                        border: 5px solid black;
+                        height: 130px;
+                    }
+                    #footerHead {
+                        font-size: 15px;
+                    }
+                    #footerPara {
+                        font-size: 13px;
+                    }
+                    #inputEmail {
+                        width: 185px;
+                        font-size: 19px;
+                    }
+                    #subscribe {
+                        font-size: 17px;
+                    }
+                    #infoList a {
+                        font-size: 12px;
+                    }
+                    #paraFooter {
+                        font-size: 10px;
+                    }
+                }

@@ -1,0 +1,1093 @@
+* {
+    margin-top: 0;
+}
+
+body {
+    font-family: Garamond;
+}
+
+.navbar {
+    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 8px;
+    margin-bottom: 10px;
+}
+
+.navbar a {
+    font-size: 18px;
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+    margin-left: 75px;
+    padding-top: 15px;
+    width: 160px;
+    text-align: center;
+}
+
+.dropdown {
+    float: left;
+    overflow: hidden;
+    margin-left: 75px;
+    height: 50px;
+    width: 160px;
+}
+
+.dropdown .dropbtn {
+    font-size: 18px;
+    border: none;
+    font-family: inherit;
+    margin: 14px;
+    FONT-WEIGHT: bold;
+    background-color: white;
+}
+
+.navbar a:hover,
+.dropdown:hover,
+.dropbtn:hover {
+    background-color: red;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 155px;
+    z-index: 1;
+}
+
+.dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    width: 122px;
+    margin-left: 0;
+}
+
+.dropdown-content a:hover {
+    background-color: rgb(10, 10, 10);
+    color: white;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+#saleBanner {
+    background: url(../IMAGES/G-IMAGES/3454.jpg);
+    background-size: cover;
+    width: 90%;
+    height: 305px;
+    border: 10px black solid;
+    text-align: center;
+    margin-left: 90px;
+}
+
+#saleBanner h1 {
+    color: rgb(223, 3, 3);
+    font-size: 145px;
+    text-align: center;
+    letter-spacing: 25px;
+    font-weight: bold;
+    margin-top: 30px;
+    padding-top: 20px;
+    text-shadow: 8px -5px 0px rgb(233 61 61);
+}
+
+#saleBanner p {
+    font-size: 21px;
+    font-weight: bold;
+    color: white;
+    background: red;
+    width: 500px;
+    height: 23px;
+    margin-left: 585px;
+    margin-top: -30px;
+}
+
+#saleBanner h3 {
+    font-size: 42px;
+    margin-top: -115px;
+    color: red;
+    font-weight: bold;
+    background-color: white;
+    width: 460px;
+    margin-left: 600px;
+    height: 42px;
+}
+
+#socialList {
+    display: flex;
+    list-style-type: none;
+    width: 10%;
+}
+
+#socialList li {
+    margin-top: 10px;
+}
+
+#socialList a {
+    text-decoration: none;
+    padding: 26px;
+    font-size: 15px;
+    color: black;
+    float: left;
+    margin-left: -35px;
+    margin-top: 8px;
+}
+
+#findUs {
+    display: flex;
+    height: 75px;
+    background-color: rgb(224, 224, 246);
+    border: 10px rgb(200, 200, 245) solid;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    margin-left: 190px;
+}
+
+#findUs p {
+    margin-bottom: 0;
+    font-size: 15px;
+    text-align: center;
+    letter-spacing: 3px;
+    width: 15%;
+    text-align: right;
+}
+
+#findUs h1 {
+    letter-spacing: 11px;
+    width: 65%;
+    font-size: 45px;
+    text-align: center;
+    margin-top: 40px;
+    margin-left: 330px;
+    color: rgb(165, 165, 228);
+}
+
+#dressesCategory {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.dress {
+    height: 500px;
+    width: 19%;
+    margin: 10px;
+    text-align: center;
+    position: relative;
+    margin-bottom: 60px;
+}
+
+.dressPrice b {
+    color: red;
+}
+
+.dressPrice del {
+    margin-left: 27px;
+}
+
+.dressImg {
+    height: 80%;
+    width: 85%;
+}
+
+.dress .nextBtn {
+    right: 27px;
+    position: absolute;
+    top: 175px;
+    font-size: 22px;
+    padding: 5px;
+    background-color: rgb(65, 59, 59, 0.1);
+    border: none;
+}
+
+.dress .preBtn {
+    left: 27px;
+    position: absolute;
+    top: 175px;
+    font-size: 22px;
+    padding: 5px;
+    background-color: rgb(65, 59, 59, 0.1);
+    border: none;
+}
+
+.dress .nextBtn:hover,
+.dress .preBtn:hover {
+    background-color: rgb(0, 0, 0, 0.3);
+    color: white;
+}
+
+.dress p {
+    margin-left: -267px;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.dress h3,
+.dress h5 {
+    text-align: center;
+    margin: 4px;
+    font-size: 17px;
+}
+
+#sortList {
+    width: 190px;
+    height: 38px;
+    font-size: 26px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    background-color: wheat;
+    color: black;
+    border: black 4px solid;
+    text-align: center;
+    margin-left: 189px;
+    margin-top: 10px;
+    font-family: Garamond;
+}
+
+.quickViewBtn {
+    position: absolute;
+    bottom: 73px;
+    right: 28px;
+    width: 305px;
+    height: 45px;
+    font-size: 18px;
+    background-color: rgb(8, 8, 8, 0.2);
+    color: white;
+    border: none;
+}
+
+.updateBtn {
+    position: absolute;
+    top: 504px;
+    font-size: 23px;
+    font-weight: bold;
+    right: 110px;
+    border: none;
+    width: 115px;
+    background-color: black;
+    color: white;
+    height: 30px;
+    padding: 7px;
+}
+
+.delete {
+    font-size: 25px;
+    position: absolute;
+    right: 33px;
+    font-weight: bold;
+}
+
+.updateBtn:hover {
+    color: red;
+}
+
+.quickViewBtn:hover {
+    height: 400px;
+    font-size: 25px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.updateForm {
+    position: fixed;
+    z-index: 999;
+    width: 36%;
+    height: 70%;
+    left: 609px;
+    top: 120px;
+    overflow: auto;
+    background-color: rgb(245, 245, 220);
+    border: solid 15px;
+}
+
+.productName,
+.productPrice,
+.productDescription,
+.productIsSale,
+.productCategory,
+.productImg1,
+.productImg2 {
+    width: 470px;
+    height: 45px;
+    font-size: 28px;
+    font-family: inherit;
+    margin-left: 115px;
+    border: none;
+    margin-bottom: 13px;
+}
+
+.exitForm {
+    position: absolute;
+    right: 30px;
+    top: 25px;
+    font-size: 45px;
+    font-weight: bold;
+}
+
+#formHeader {
+    font-family: inherit;
+    font-size: 40px;
+    margin-left: 202px;
+    margin-top: 25px;
+}
+
+.sendUpdate {
+    width: 470px;
+    height: 45px;
+    margin-left: 118px;
+    font-size: 28px;
+    font-family: inherit;
+    font-weight: bold;
+    background-color: black;
+    color: white;
+    border: none;
+}
+
+.quickView {
+    position: fixed;
+    z-index: 999;
+    width: 85%;
+    height: 100%;
+    left: 140px;
+    top: 0;
+    overflow: auto;
+    background-color: rgb(245, 245, 220);
+}
+
+.quickViewContent {
+    display: flex;
+    background-color: rgb(245, 245, 220);
+}
+
+.leftQuickView {
+    width: 60%;
+    text-align: center;
+}
+
+.QVImg1,
+.QVImg2 {
+    width: 360px;
+    height: 530px;
+    padding-top: 100px;
+}
+
+.QVImg1:hover,
+.QVImg2:hover {
+    width: 460px;
+    height: 660px;
+}
+
+.leftQuickView h3 {
+    font-size: 25px;
+    margin-top: 30px;
+    margin-right: 380px;
+}
+
+.leftQuickView p {
+    margin-right: 368px;
+}
+
+.rightQuickView {
+    width: 30%;
+    margin-top: 127px;
+    margin-left: 0;
+}
+
+.rightQuickView h1 {
+    font-size: 37px;
+}
+
+.rightQuickView h3,
+.rightQuickView h4 {
+    font-size: 24px;
+}
+
+.rightQuickView button {
+    width: 345px;
+    height: 50px;
+    background-color: rgba(182, 182, 149);
+    opacity: 0.;
+    letter-spacing: 3px;
+    font-size: 23px;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+#deliveryInfo {
+    width: 343px;
+    margin-top: 13px;
+    height: 50px;
+    font-size: 25px;
+    word-spacing: 2px;
+    letter-spacing: 2px;
+    margin-top: 85px;
+}
+
+.exit {
+    float: right;
+    font-weight: bold;
+    font-size: 45px;
+    margin-right: 40px;
+}
+
+#sizeInfo {
+    font-size: 25px;
+    margin-left: 593px;
+    margin-top: -131px;
+}
+
+#sizeInfoP {
+    font-size: 17px;
+    margin-right: -344px;
+    text-align: center;
+}
+
+footer {
+    background-color: beige;
+    padding-top: 1px;
+}
+
+#footerHead,
+#footerPara,
+#updates {
+    text-align: center;
+}
+
+#footerHead {
+    letter-spacing: 2px;
+    font-size: 30px;
+}
+
+#footerPara {
+    margin-top: -17px;
+    margin-bottom: 50px;
+    font-size: 25px;
+}
+
+#inputEmail {
+    background-color: beige;
+    border-right: none;
+    border-left: none;
+    border-top: none;
+    border-bottom: 1px solid black;
+    width: 470px;
+    font-size: 28px;
+    font-family: Garamond;
+}
+
+#subscribe {
+    border: solid 0.2px blanchedalmond;
+    font-size: 8px;
+    background-color: beige;
+    color: black;
+    font-size: 20px;
+    font-family: Garamond;
+    padding: 4px;
+}
+
+#subscribe:hover,
+#inputEmail:hover {
+    background-color: blanchedalmond;
+}
+
+#infoList {
+    list-style-type: none;
+    margin-left: -40px;
+    text-align: center;
+    padding: 40px;
+}
+
+#infoList li {
+    margin: 10px;
+}
+
+#infoList a {
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+    width: 230px;
+}
+
+#bottomFooter {
+    background-color: rgb(255, 235, 205);
+    height: 65px;
+}
+
+#paraFooter {
+    font-size: 16px;
+    font-family: Garamond;
+    text-align: center;
+    padding-top: 20px;
+}
+
+@media screen and (max-width: 1025px) {
+    .navbar a {
+        margin-left: 30px;
+        width: 140px;
+        font-size: 17px;
+    }
+    .dropdown {
+        margin-right: 60px;
+        margin-left: 40px;
+    }
+    .dropdown .dropbtn {
+        font-size: 17px;
+    }
+    #saleBanner p {
+        margin-left: 220px;
+        margin-top: -40px;
+        font-size: 19px;
+        width: 460px;
+    }
+    #saleBanner h3 {
+        margin-left: 263px;
+        margin-top: -120px;
+        font-size: 30px;
+        width: 370px;
+    }
+    #saleBanner {
+        margin-left: 43px;
+        height: 285px;
+    }
+    #findUs {
+        margin-left: 95px;
+        height: 55px;
+    }
+    #findUs p {
+        font-size: 5px;
+    }
+    #findUs h1 {
+        font-size: 28px;
+        margin-top: 22px;
+        margin-left: 214px;
+    }
+    #sortList {
+        margin-left: 165px;
+        width: 120px;
+        height: 34px;
+        font-size: 22px;
+    }
+    #socialList a {
+        font-size: 9px;
+        padding: 22px
+    }
+    .dress .nextBtn {
+        right: 15px;
+        font-size: 20px;
+    }
+    .dress .preBtn {
+        left: 14px;
+        font-size: 20px;
+    }
+    .quickViewBtn {
+        right: 15px;
+        width: 163px;
+        bottom: 126px;
+    }
+    .quickViewBtn:hover {
+        height: 350px;
+        font-size: 15px;
+    }
+    .QVImg1,
+    .QVImg2 {
+        width: 335px;
+        height: 415px;
+        padding-top: 40px;
+    }
+    .QVImg1:hover,
+    .QVImg2:hover {
+        width: 400px;
+        height: 480px;
+    }
+    .leftQuickView {
+        margin-top: 50px;
+    }
+    .leftQuickView h3 {
+        margin-right: -10px;
+    }
+    .leftQuickView p {
+        margin-right: -18px;
+        padding-bottom: 25px;
+    }
+    .rightQuickView {
+        margin-top: 90px;
+        margin-left: -25px;
+    }
+    .quickView {
+        left: 88px;
+    }
+    .rightQuickView h1 {
+        font-size: 30px;
+    }
+    .rightQuickView h3,
+    .rightQuickView h4 {
+        font-size: 20px;
+    }
+    .rightQuickView button {
+        width: 250px;
+        height: 35px;
+    }
+    #sizeInfo {
+        margin-left: 590px;
+        margin-top: -136px;
+    }
+    #sizeInfoP {
+        margin-right: -764px;
+    }
+    .dress h3,
+    .dress h5 {
+        font-size: 14px;
+    }
+    .dress p {
+        margin-left: -128px;
+        font-size: 16px;
+    }
+    .dressImg {
+        height: 70%;
+    }
+    #footerPara {
+        margin-bottom: 38px;
+    }
+    #footerHead {
+        font-size: 28px;
+        font-size: 23px;
+    }
+    #inputEmail {
+        width: 440px;
+        font-size: 26px;
+    }
+    #subscribe {
+        font-size: 19px;
+    }
+    #infoList a {
+        font-size: 14px;
+    }
+    #paraFooter {
+        font-size: 13px;
+        padding-top: 18px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .navbar a {
+        margin-left: 0;
+        width: 140px;
+        font-size: 16px;
+    }
+    .dropdown {
+        margin-right: 15px;
+        margin-left: 0;
+    }
+    .dropdown .dropbtn {
+        font-size: 16px;
+    }
+    #saleBanner {
+        height: 200px;
+        margin-left: 28px;
+    }
+    #saleBanner h1 {
+        font-size: 85px;
+    }
+    #saleBanner h3 {
+        margin-left: 208px;
+        margin-top: -64px;
+        font-size: 24px;
+        width: 245px;
+        height: 26px;
+    }
+    #saleBanner p {
+        margin-left: 142px;
+        margin-top: -20px;
+        font-size: 14px;
+        width: 390px;
+        height: 18px;
+    }
+    #findUs {
+        margin-left: 90px;
+        height: 30px;
+        border: 4px rgb(200, 200, 245) solid;
+        width: 75%;
+    }
+    #findUs h1 {
+        font-size: 19px;
+        margin-top: 18px;
+        margin-left: 159px;
+    }
+    #findUs p {
+        font-size: 5px;
+    }
+    #socialList a {
+        font-size: 5px;
+        padding: 22px;
+    }
+    #sortList {
+        margin-left: 94px;
+        width: 135px;
+        height: 27px;
+        font-size: 17px;
+        border: black 2px solid;
+    }
+    .dress {
+        height: 380px;
+        margin-bottom: 0px;
+    }
+    .dressImg {
+        height: 60%;
+    }
+    .dress .nextBtn {
+        right: 10px;
+        font-size: 11px;
+        top: 140px;
+    }
+    .dress .preBtn {
+        left: 11px;
+        font-size: 11px;
+        top: 140px;
+    }
+    .quickViewBtn {
+        right: 11px;
+        width: 121px;
+        bottom: 114px;
+        height: 27px;
+        font-size: 15px;
+    }
+    .quickViewBtn:hover {
+        height: 201px;
+        font-size: 15px;
+    }
+    .dress {
+        height: 335px;
+        margin-bottom: -22px;
+    }
+    .dress h3,
+    .dress h5 {
+        font-size: 11px;
+    }
+    .dress h3,
+    .dress h5 {
+        font-size: 10px;
+    }
+    .dress p {
+        margin-left: -91px;
+        font-size: 12px;
+    }
+    #footerHead {
+        font-size: 21px;
+    }
+    #footerPara {
+        font-size: 18px;
+    }
+    #inputEmail {
+        width: 320px;
+        font-size: 22px;
+    }
+    #subscribe {
+        font-size: 16px;
+    }
+    #infoList a {
+        font-size: 12px;
+    }
+    #info {
+        height: 120px;
+    }
+    #infoList {
+        padding: 30px;
+    }
+    #bottomFooter {
+        height: 45px;
+    }
+    .quickView {
+        width: 85%;
+        height: 100%;
+        left: 70px;
+    }
+    .leftQuickView {
+        width: 55%;
+    }
+    .QVImg1,
+    .QVImg2 {
+        width: 190px;
+        height: 270px;
+        padding-top: 50px;
+    }
+    .QVImg1:hover,
+    .QVImg2:hover {
+        width: 260px;
+        height: 330px;
+    }
+    .leftQuickView p {
+        margin-right: -18px;
+        padding-bottom: 57px;
+    }
+    .leftQuickView h3 {
+        font-size: 17px;
+        margin-top: 10px;
+    }
+    .rightQuickView {
+        width: 45%;
+        margin-top: 97px;
+    }
+    .rightQuickView h1 {
+        font-size: 23px;
+    }
+    .rightQuickView h3,
+    .rightQuickView h4 {
+        font-size: 20px;
+    }
+    .rightQuickView select {
+        width: 240px;
+        height: 25px;
+    }
+    .rightQuickView button {
+        width: 240px;
+        height: 28px;
+        font-size: 14px;
+    }
+    #deliveryInfo {
+        font-size: 16px;
+    }
+    .exit {
+        font-size: 30px;
+        margin-right: -10px;
+    }
+    #sizeInfo {
+        font-size: 17px;
+        margin-left: 442px;
+        margin-top: -141px;
+    }
+    #sizeInfoP {
+        font-size: 14px;
+        margin-right: -603px;
+        margin-top: -3px;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .dropdown {
+        margin-right: -90px;
+        margin-left: -50px;
+    }
+    .dropdown .dropbtn {
+        font-size: 11px;
+    }
+    .navbar a {
+        margin-left: -80px;
+        font-size: 11px;
+    }
+    #saleBanner {
+        height: 90px;
+        margin-left: 10px;
+    }
+    #saleBanner h1 {
+        font-size: 30px;
+    }
+    #saleBanner h1 {
+        margin-top: -15px;
+        text-shadow: 5px -3px 0px rgb(233 61 61);
+    }
+    #saleBanner h3 {
+        margin-left: 112px;
+        margin-top: -4px;
+        font-size: 13px;
+        width: 125px;
+        height: 15px;
+    }
+    #saleBanner p {
+        margin-left: 80px;
+        margin-top: -8px;
+        font-size: 8px;
+        width: 193px;
+        height: 10px;
+    }
+    #findUs {
+        margin-left: 45px;
+        height: 14px;
+        border: 2px rgb(200, 200, 245) solid;
+    }
+    #findUs h1 {
+        font-size: 9px;
+        margin-top: 8px;
+        margin-left: 110px;
+        letter-spacing: 5px;
+        width: 55%;
+    }
+    #findUs p {
+        font-size: 3px;
+        width: 25%;
+        letter-spacing: 2px;
+        margin-top: 1px;
+    }
+    #socialList a {
+        font-size: 3px;
+        padding: 0;
+        padding-right: 41px;
+    }
+    #sortList {
+        margin-left: 65px;
+        width: 50px;
+        height: 12px;
+        font-size: 4px;
+        border: black 1px solid;
+    }
+    .dress {
+        height: 500px;
+        width: 27%;
+    }
+    .dressImg {
+        height: 30%;
+    }
+    .dress h3,
+    .dress h5 {
+        font-size: 8px;
+    }
+    .dress h3,
+    .dress h5 {
+        font-size: 5px;
+    }
+    .dress p {
+        margin-left: -70px;
+        font-size: 7px;
+    }
+    .dress .nextBtn {
+        right: 8px;
+        font-size: 7px;
+        top: 90px;
+        width: 10px;
+    }
+    .dress .preBtn {
+        left: 9px;
+        font-size: 7px;
+        top: 90px;
+        width: 10px;
+    }
+    .dress {
+        height: 275px;
+        width: 27%;
+        margin-bottom: -130px;
+    }
+    .quickViewBtn {
+        right: 8px;
+        width: 94px;
+        bottom: 179px;
+        height: 13px;
+        font-size: 6px;
+    }
+    .quickViewBtn:hover {
+        height: 83px;
+        font-size: 7px;
+    }
+    .dress .nextBtn {
+        right: 8px;
+        font-size: 4px;
+        top: 52px;
+        width: 10px;
+    }
+    .dress .preBtn {
+        left: 9px;
+        font-size: 4px;
+        top: 52px;
+        width: 10px;
+    }
+    .dress p {
+        margin-left: -81px;
+        font-size: 5px;
+    }
+    #footerHead {
+        font-size: 16px;
+    }
+    #footerPara {
+        font-size: 13px;
+    }
+    #inputEmail {
+        width: 140px;
+        font-size: 11px;
+    }
+    #subscribe {
+        font-size: 8px;
+    }
+    #footerPara {
+        margin-bottom: 28px;
+    }
+    #info {
+        height: 75px;
+    }
+    #infoList a {
+        font-size: 7px;
+    }
+    #infoList li {
+        margin: -8px;
+    }
+    #paraFooter {
+        font-size: 5px;
+        padding-top: 6px;
+    }
+    #bottomFooter {
+        height: 20px;
+    }
+    .quickView {
+        width: 86%;
+        height: 100%;
+        left: 30px;
+    }
+    .leftQuickView {
+        width: 55%;
+        margin-top: 40px;
+    }
+    .QVImg1,
+    .QVImg2 {
+        width: 105px;
+        height: 120px;
+    }
+    .QVImg1:hover,
+    .QVImg2:hover {
+        width: 165px;
+        height: 180px;
+    }
+    .leftQuickView h3 {
+        font-size: 12px;
+    }
+    .leftQuickView p {
+        font-size: 9px;
+    }
+    .rightQuickView {
+        width: 45%;
+        margin-top: 92px;
+    }
+    .rightQuickView h1 {
+        font-size: 13px;
+    }
+    .rightQuickView h3,
+    .rightQuickView h4 {
+        font-size: 10px;
+    }
+    .rightQuickView button {
+        width: 115px;
+        height: 14px;
+        font-size: 9px;
+    }
+    #deliveryInfo {
+        font-size: 9px;
+    }
+    .exit {
+        font-size: 15px;
+        margin-right: -10px;
+    }
+    #sizeInfo {
+        font-size: 12px;
+        margin-left: 254px;
+        margin-top: -112px;
+    }
+    #sizeInfoP {
+        font-size: 9px;
+        margin-right: -345px;
+    }
+}

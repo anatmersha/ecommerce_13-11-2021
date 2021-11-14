@@ -1,0 +1,313 @@
+* {
+    margin-top: 0;
+}
+
+body {
+    background: linear-gradient(90deg, rgb(194, 117, 117) 50%, white 50% 50%);
+    font-family: Garamond;
+}
+
+.navbar {
+    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+}
+
+.navbar a {
+    font-size: 18px;
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+    padding-top: 15px;
+    width: 160px;
+    text-align: center;
+}
+
+.dropdown {
+    float: left;
+    overflow: hidden;
+    height: 50px;
+    width: 160px;
+}
+
+.dropdown .dropbtn {
+    font-size: 18px;
+    border: none;
+    font-family: inherit;
+    margin: 14px;
+    FONT-WEIGHT: bold;
+    background-color: transparent;
+}
+
+.navbar a:hover,
+.dropdown:hover,
+.dropbtn:hover {
+    background-color: red;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 155px;
+    z-index: 1;
+}
+
+.dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    width: 122px;
+    margin-left: 0;
+}
+
+.dropdown-content a:hover {
+    background-color: rgb(10, 10, 10);
+    color: white;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+main {
+    display: flex;
+}
+
+#createCartHeader,
+#findCartHeader {
+    font-size: 45px;
+    margin-left: 305px;
+    margin-top: 47px;
+    margin-bottom: 10px;
+}
+
+#findCartHeader {
+    margin-left: 368px;
+}
+
+#leftSection,
+#formOutcomeSection {
+    width: 50%;
+    margin-top: 70px;
+}
+
+#nameInput,
+#cartId {
+    margin-left: 282px;
+    height: 50px;
+    font-size: 23px;
+    font-family: inherit;
+    margin-bottom: 10px;
+    width: 380px;
+}
+
+#creatCartBtn,
+#getCartBtn {
+    height: 40px;
+    border: none;
+    font-size: 23px;
+    font-family: inherit;
+    width: 387px;
+    margin-left: 282px;
+}
+
+#forms {
+    position: fixed;
+    top: 100px;
+}
+
+#newCart {
+    margin-top: 112px;
+    font-size: 23px;
+    font-family: inherit;
+}
+
+#searchedCartHeader {
+    font-size: 40px;
+}
+
+#searchedCartProdHeader {
+    font-size: 30px;
+}
+
+#showMyCartProducts img {
+    width: 500px;
+}
+
+hr {
+    width: 520px;
+    margin-left: 0;
+}
+
+#paraFooter {
+    position: fixed;
+    top: 910px;
+    left: 325px;
+}
+
+@media screen and (max-width: 1025px) {
+    .navbar a {
+        margin-left: -15px;
+        width: 127px;
+        font-size: 15px;
+    }
+    .dropdown {
+        margin-right: 60px;
+        margin-left: -38px;
+    }
+    .dropdown .dropbtn {
+        font-size: 15px;
+        margin-left: 40px;
+    }
+    #rightSection {
+        margin-top: 50px;
+    }
+    #nameInput,
+    #cartId {
+        margin-left: 75px;
+        height: 40px;
+        width: 312px;
+    }
+    #creatCartBtn,
+    #getCartBtn {
+        width: 317px;
+        margin-left: 76px;
+    }
+    #createCartHeader,
+    #findCartHeader {
+        font-size: 37px;
+        margin-left: 98px;
+    }
+    #findCartHeader {
+        margin-left: 140px;
+    }
+    #newCart {
+        margin-top: 93px;
+        font-size: 19px;
+    }
+    #searchedCartHeader {
+        font-size: 35px;
+    }
+    #searchedCartProdHeader {
+        font-size: 25px;
+    }
+    #paraFooter {
+        top: 821px;
+        left: 104px;
+        font-size: 15px;
+    }
+    #showMyCartProducts img {
+        width: 355px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .navbar a {
+        margin-left: -18px;
+        width: 115px;
+        font-size: 13px;
+    }
+    .dropdown .dropbtn {
+        font-size: 13px;
+        margin-left: 28px;
+    }
+    #forms {
+        top: 60px;
+    }
+    #createCartHeader,
+    #findCartHeader {
+        font-size: 24px;
+        margin-left: 84px;
+    }
+    #findCartHeader {
+        margin-left: 115px;
+    }
+    #nameInput,
+    #cartId {
+        margin-left: 68px;
+        height: 30px;
+        width: 210px;
+        font-size: 18px;
+    }
+    #creatCartBtn,
+    #getCartBtn {
+        width: 218px;
+        margin-left: 68px;
+        height: 30px;
+        font-size: 18px;
+    }
+    #newCart {
+        margin-top: 30px;
+        font-size: 15px;
+    }
+    #searchedCartHeader {
+        font-size: 29px;
+    }
+    #showSearchedCart,
+    #showMyCartProducts {
+        font-size: 15px;
+    }
+    #showMyCartProducts img {
+        width: 230px;
+    }
+    #paraFooter {
+        top: 824px;
+        left: 66px;
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .navbar a {
+        margin-left: -14px;
+        width: 65px;
+        font-size: 9px;
+    }
+    .dropdown .dropbtn {
+        font-size: 9px;
+    }
+    #createCartHeader,
+    #findCartHeader {
+        font-size: 20px;
+        margin-left: 20px;
+    }
+    #nameInput,
+    #cartId {
+        margin-left: 17px;
+        height: 18px;
+        width: 154px;
+        font-size: 13px;
+    }
+    #creatCartBtn,
+    #getCartBtn {
+        width: 160px;
+        margin-left: 17px;
+        height: 18px;
+        font-size: 13px;
+    }
+    #findCartHeader {
+        margin-left: 50px;
+    }
+    #newCart {
+        margin-top: 22px;
+        font-size: 9px;
+    }
+    #searchedCartHeader {
+        font-size: 22px;
+    }
+    #searchedCartProdHeader {
+        font-size: 17px;
+    }
+    #showSearchedCart,
+    #showMyCartProducts {
+        font-size: 9px;
+    }
+    #showMyCartProducts img {
+        width: 149px;
+    }
+}

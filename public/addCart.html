@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/addCart.css">
+    <title>Document</title>
+
+</head>
+
+<body>
+    <header>
+        <nav>
+            <section class="navbar">
+                <a href="../index.html">HOME</a>
+                <a href="../contact.html">CONTACTS</a>
+                <a href="./cart.html">CART</a>
+                <div class="dropdown">
+                    <button class="dropbtn">PRODUCTS 
+                    <i class="fa fa-caret-down"></i>
+                  </button>
+
+                    <div class="dropdown-content">
+                        <a href="./top.html">Tops</a>
+                        <a href="./buttom.html">Buttoms</a>
+                        <a href="./dresses.html">Dresses</a>
+                        <a href="./shoes.html">Shoes</a>
+                    </div>
+                </div>
+            </section>
+        </nav>
+    </header>
+    <main>
+        <section id="leftSection">
+            <article id="forms">
+                <h1 id="createCartHeader">Create a new cart</h1>
+
+                <form id="idCreateCart">
+                    <input id="nameInput" type="text" required autofocus placeholder="Enter a cart name"><br>
+                    <button id="creatCartBtn" type="submit">SUBMIT</button>
+                </form>
+
+                <h1 id="findCartHeader">Find a cart</h1>
+                <form id="idFindMyCart">
+                    <input id="cartId" type="text" required placeholder="Enter a cart id"><br>
+                    <button id="getCartBtn">GET</button>
+                </form>
+
+            </article>
+        </section>
+
+        <section id="formOutcomeSection">
+            <article id="newCart"></article>
+            <article id="showSearchedCart"></article>
+        </section>
+    </main>
+    <footer>
+        <p id="paraFooter">© 2023 by Anat Mersha. All rights reserved to A.M.</p>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script>
+        document.getElementById('idCreateCart').addEventListener("submit", creatNewCart);
+        document.getElementById('idFindMyCart').addEventListener("submit", getMyCart);
+        const newCart = document.getElementById('newCart');
+        const showMyCartProducts = document.getElementById('showMyCartProducts');
+        const showSearchedCart = document.getElementById('showSearchedCart');
+
+        function creatNewCart(event) {
+            event.preventDefault();
+            const Name = document.getElementById('nameInput').value;
+            axios.post("/carts", {
+                Name: Name,
+            }).then(function(response) {
+                const newCartId = response.data.insertedId;
+                console.log(newCartId);
+                newCart.innerHTML += `<h1><b>Your new cart id:</b> "${newCartId}"
+                </h1><hr width="60px">`;
+                alert("Mission accomplished");
+            }).catch(function(error) {
+                console.log(error);
+            })
+        }
+
+        function getMyCart(event) {
+            event.preventDefault();
+            const cartId = document.getElementById('cartId').value;
+            console.log(cartId);
+
+            axios.get(`/findCarts/${cartId}`)
+                .then((response) => {
+                    const myCart = response.data;
+                    const myCartProducts = response.data.Products;
+                    console.log(myCart);
+                    showSearchedCart.innerHTML += ` 
+                    <h1 id="searchedCartHeader">My cart</h1> 
+                    <p><b>Cart id:</b> ${myCart._id}</p>
+                    <p><b>Cart name:</b> ${myCart.Name}</p><hr>
+                    <article id="showMyCartProducts"><h3 id="searchedCartProdHeader">My cart products</h3></article> `
+
+                    const showMyCartProducts = document.getElementById('showMyCartProducts');
+                    for (let i = 0; i < myCartProducts.length; i++) {
+                        showMyCartProducts.innerHTML += ` 
+                        <p><b>Product name:</b> ${myCartProducts[i].Name}</p>
+                        <p><b>Product price:</b> ${myCartProducts[i].Price}</p>
+                        <p><b>Product id:</b> "${myCartProducts[i]._id}"</p>
+                        <img src="${myCartProducts[i].Images[0]}"> 
+                        <img src="${myCartProducts[i].Images[1]}"`;
+                    }
+                }).catch((error) => {
+                    console.log(error);
+                })
+        }
+    </script>
+</body>
+
+</html>
