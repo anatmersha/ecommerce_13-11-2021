@@ -9,6 +9,7 @@
                     justify-content: center;
                     list-style-type: none;
                     letter-spacing: 5px;
+                    align-items: center;
                 }
                 
                 #navBar li {

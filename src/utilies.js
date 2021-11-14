@@ -2,8 +2,8 @@ const express = require("express");
 const mongo = require('mongodb');
 const path = require("path");
 
-const URL = process.env.MONGODB_URL || "mongodb://localhost:27017";
-// const URL = "mongodb://localhost:27017";
+// const URL = process.env.MONGODB_URL || "mongodb://localhost:27017";
+const URL = "mongodb://localhost:27017";
 const publicPath = path.join(__dirname, "..", "public");
 
 const app = express();
