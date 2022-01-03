@@ -5,8 +5,8 @@ const utilies = require("./utilies");
 // const products = require("./products");
 
 // const URL = "mongodb://localhost:27017";
-const PORT = 2000;
-const publicPath = path.join(__dirname, "..", "public");
+const PORT = 8000;
+const publicPath = path.join(__dirname, "..", "public/HTML");
 
 const app = express();
 // const ObjectId = mongo.ObjectId;
@@ -48,7 +48,6 @@ app.post('/products', (req, res) => {
 })
 
 // GET PRODUCTS BY CATEGORY
-
 app.get("/categories/:category", (req, res) => {
     utilies.getProductsByCategorey(req, res);
 })
@@ -97,8 +96,6 @@ app.post("/carts", (req, res) => {
 app.patch("/deleteProduct/:id", (req, res) => {
     utilies.deleteCartProducts(req, res);
 })
-
-
 
 app.get("*", (req, res) => {
     res.send("Error.. There is not such page!");
