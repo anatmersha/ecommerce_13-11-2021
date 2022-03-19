@@ -1,21 +1,12 @@
-const express = require("express");
 const mongo = require('mongodb');
-const path = require("path");
-require("dotenv").config({ path: "../.env" })
-    // const URL = process.env.MONGODB_URL || "mongodb://localhost:27017";
-const URL = "mongodb://localhost:27017";
-const publicPath = path.join(__dirname, "..", "public");
+require("dotenv").config()
 
-const app = express();
+const MongoClient = mongo.MongoClient;
+const URL = process.env.MONGODB_URL || "mongodb://localhost:27017";
 const ObjectId = mongo.ObjectId;
 const dbName = "ecommerce";
-const MongoClient = mongo.MongoClient;
-app.use(express.static(publicPath));
-app.use(express.json());
 
-
-//           /CATEGORY/
-// get product by category 
+// PRODUCTS
 function getProductsByCategorey(req, res) {
     MongoClient.connect(URL, function(err, db) {
         if (err) { console.log(err); }
@@ -29,8 +20,6 @@ function getProductsByCategorey(req, res) {
             })
     })
 }
-
-//           API/CATEGORY/CRUD
 // POST
 function addProduct(req, res) {
     MongoClient.connect(URL, function(err, db) {
@@ -75,7 +64,6 @@ function getAllProducts(req, res) {
             })
     })
 }
-
 // PATCH
 function updateProduct(req, res) {
     MongoClient.connect(URL, function(err, db) {
@@ -110,8 +98,7 @@ function deleteProduct(req, res) {
 }
 
 
-//             /CART/
-// get my cart 
+// CART
 // POST
 function addNewCart(req, res) {
     MongoClient.connect(URL, function(err, db) {
@@ -180,7 +167,8 @@ function deleteCartProducts(req, res) {
     })
 }
 
-//       /CONTACT/
+
+//CONTACT
 // GET
 function getAllMessages(req, res) {
     MongoClient.connect(URL, function(err, db) {
@@ -217,4 +205,10 @@ function addNewMessage(req, res) {
 }
 
 
-module.exports = { getProductsByCategorey, getAllMessages, addNewMessage, deleteCartProducts, pushProductToCart, getCartByID, addNewCart, addProduct, getAllProducts, updateProduct, deleteProduct };
+module.exports = { 
+    getProductsByCategorey, getAllMessages, 
+    addNewMessage, deleteCartProducts, 
+    pushProductToCart, getCartByID, addNewCart, 
+    addProduct, getAllProducts, 
+    updateProduct, deleteProduct 
+};

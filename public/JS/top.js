@@ -21,7 +21,7 @@ const exitForm = document.getElementsByClassName('exitForm');
 axios
     .get(`/categories/top`)
     .then((data) => {
-
+        console.log(data);
         tops = data.data;
         itemsDisplay(tops);
         next();
