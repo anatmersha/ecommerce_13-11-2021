@@ -6,7 +6,7 @@ const utils = require("./utils");
 // const products = require("./products");
 
 const app = express();
-const PORT = 8000;
+// const PORT = 8000;
 const publicPath = path.join(__dirname, "..", "public");
 
 // const MongoClient = mongo.MongoClient;
@@ -103,6 +103,6 @@ app.get("*", (req, res) => {
     res.send("Error.. There is not such page!");
 })
 
-app.listen(PORT, () => {
+app.listen(process.env.PORT || 8000, () => {
     console.log(`server listen to port ${PORT}`);
 });
