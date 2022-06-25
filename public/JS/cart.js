@@ -43,7 +43,7 @@ function deleteProduct(x) {
 
 const cartItemsDisplay = (cartList, cart) => {
     let display = "";
-    for (var i = 0; i < cartList.length; i++) {
+    for (var i = 0; i < cartList?.length; i++) {
         display += `
         <table id="${cartList[i].Id}" class="cartTable">
         <tr> 
