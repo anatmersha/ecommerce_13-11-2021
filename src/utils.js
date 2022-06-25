@@ -125,7 +125,7 @@ function addNewCart(req, res) {
         const dbo = db.db(dbName);
 
         const Name = req.body.Name;
-        const newCart = { Name, Products: [] };
+        const newCart = { Name: Name, Products: [] };
 
         dbo.collection("carts").insertOne(newCart, (err, result) => {
             if (err) { console.log(err); }
