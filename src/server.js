@@ -1,39 +1,12 @@
 const express = require("express");
-// const mongo = require('mongodb');
-// require("dotenv").config()
 const path = require("path");
 const utils = require("./utils");
-// const products = require("./products");
 
 const app = express();
-// const PORT = 8000;
 const publicPath = path.join(__dirname, "..", "public");
-
-// const MongoClient = mongo.MongoClient;
-// const URL = process.env.MONGODB_URL || "mongodb://localhost:27017";
-// const ObjectId = mongo.ObjectId;
-// const dbName = "ecommerce";
 
 app.use(express.static(publicPath));
 app.use(express.json());
-
-// MongoClient.connect(URL, function(err, db) {
-//     if (err) { console.log(err); }
-//     const dbo = db.db(dbName);
-//     const collections = ["products", "carts", "contact"];
-//     collections.forEach((collectionName) => dbo.createCollection(collectionName, function(err, res) {
-//         if (err) { console.log(err); }
-//         console.log("Collection created!");
-//     }))
-//     dbo.collection("products").countDocuments((err, result) => {
-//         if (result === 0) {
-//             dbo.collection("products").insertMany(products, function(err, res) {
-//                 if (err) { console.log(err); }
-//                 console.log(res);
-//             })
-//         }
-//     });
-// })
 
 app.get('/', (req, res) => {
     res.send("index");
@@ -103,6 +76,6 @@ app.get("*", (req, res) => {
     res.send("Error.. There is not such page!");
 })
 
-app.listen(process.env.PORT || 8000, () => {
-    console.log(`server listen to port ${PORT}`);
+app.listen(process.env.PORT || 8080, () => {
+    console.log(`server listen to port ${process.env.PORT}`);
 });

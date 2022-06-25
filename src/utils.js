@@ -1,10 +1,29 @@
 const mongo = require('mongodb');
 require("dotenv").config()
+const products = require("./products");
 
 const MongoClient = mongo.MongoClient;
 const URL = process.env.MONGODB_URL || "mongodb://localhost:27017";
 const ObjectId = mongo.ObjectId;
 const dbName = "ecommerce";
+
+MongoClient.connect(URL, function(err, db) {
+    if (err) { console.log(err); }
+    const dbo = db.db(dbName);
+    const collections = ["products", "carts", "contact"];
+    collections.forEach((collectionName) => dbo.createCollection(collectionName, function(err, res) {
+        if (err) { console.log(err); }
+        console.log("Collection created!");
+    }))
+    dbo.collection("products").countDocuments((err, result) => {
+        if (result === 0) {
+            dbo.collection("products").insertMany(products, function(err, res) {
+                if (err) { console.log(err); }
+                console.log(res);
+            })
+        }
+    });
+})
 
 // PRODUCTS
 function getProductsByCategorey(req, res) {
